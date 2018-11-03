@@ -10,6 +10,11 @@ namespace Adventure
     {
         static void Main(string[] args)
         {
+            var player = Player.GetInstance();
+            while(true)
+            {
+                InputReader.GetAction(player);
+            }
         }
     }
 }
