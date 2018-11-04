@@ -6,12 +6,23 @@ using System.Threading.Tasks;
 
 namespace Adventure.Enemies
 {
-    public abstract class Enemy
+    public class Enemy
     {
-        public abstract string Name { get; }
-        public abstract int Hitpoints { get; set; }
-        public abstract int Attack { get; }
-        public abstract int Defense { get; }
-        public abstract string VictoryStatement { get; }
+        public Enemy(string name, int hitpoints, int attack, int defense, string victoryText, int gold)
+        {
+            Name = name;
+            Hitpoints = hitpoints;
+            Attack = attack;
+            Defense = defense;
+            VictoryText = victoryText;
+            Gold = gold;
+        }
+
+        public string Name { get; }
+        public int Hitpoints { get; set; }
+        public int Attack { get; }
+        public int Defense { get; }
+        public string VictoryText { get; }
+        public int Gold { get; }
     }
 }

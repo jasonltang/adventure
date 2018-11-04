@@ -21,8 +21,14 @@ namespace Adventure.Locations
 
         //}
 
-        private Enemy _enemy = new Rat(); // Change to enemyFactory
-        private Player _player = Player.GetInstance();
+        public Battle()
+        {
+            _player = Player.GetInstance();
+            IEnemyFactory enemyFactory = new EnemyFactory();
+            _enemy = enemyFactory.GetEnemy();
+        }
+        private Enemy _enemy;
+        private Player _player;
 
         public override string LocationText
         {

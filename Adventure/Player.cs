@@ -22,6 +22,8 @@ namespace Adventure
             Hitpoints = 10;
             Attack = 1;
             Defense = 0;
+            Gold = 0;
+            Deaths = 0;
             //Weapon = 0;
             //Armour = 0;
             Location = Home.GetInstance();
@@ -32,8 +34,11 @@ namespace Adventure
         public int Hitpoints;
         public int Attack;
         public int Defense;
+        public int Gold;
+        public int Deaths;
         //int Weapon { get; set; }
         //int Armour { get; set; }
         public Location Location { get; set; }
+        public Random Rng = new Random((int)DateTime.Now.Ticks);
     }
 }

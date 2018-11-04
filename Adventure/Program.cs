@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Todo: Make coins useful
+// Todo: Find a way to train stats
+// Todo: Make attacks random?
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

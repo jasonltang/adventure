@@ -29,7 +29,9 @@ namespace Adventure.Actions
             if (IsEnemyDead())
             {
                 Console.WriteLine($"You have killed the {_enemy.Name}!");
-                Console.WriteLine(_enemy.VictoryStatement);
+                Console.WriteLine(_enemy.VictoryText);
+                Console.WriteLine($"You receive {_enemy.Gold} gold.");
+                _player.Gold += _enemy.Gold;
                 Console.WriteLine();
                 new ChangeLocationAction(Park.GetInstance()).Execute();
                 return;
@@ -39,6 +41,7 @@ namespace Adventure.Actions
             {
                 Console.WriteLine("You die!");
                 Console.WriteLine();
+                _player.Deaths++;
                 _player.Hitpoints = _player.MaxHitpoints;
                 new ChangeLocationAction(Home.GetInstance()).Execute();
                 return;

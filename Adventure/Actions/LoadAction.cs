@@ -19,10 +19,14 @@ namespace Adventure.Actions
         {
             var player = Player.GetInstance();
             string line;
-            using (StreamReader sr = new StreamReader("SaveFile.txt"))
+            using (StreamReader sr = new StreamReader("AdventureSaveFile.txt"))
             {
                 while((line = sr.ReadLine()) != null)
                 {
+                    if (!SaveAction.PLAINSAVE)
+                    {
+                        line = Encoding.UTF8.GetString(Convert.FromBase64String(line));
+                    }
                     var list = line.Split(' ');
                     var fieldName = list[0];
                     var field = typeof(Player).GetField(fieldName);

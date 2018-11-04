@@ -21,6 +21,8 @@ namespace Adventure.Actions
             Console.WriteLine($"Hitpoints: {player.Hitpoints}");
             Console.WriteLine($"Attack: {player.Attack}");
             Console.WriteLine($"Defense: {player.Defense}");
+            Console.WriteLine($"Gold: {player.Gold}");
+            Console.WriteLine($"Deaths: {player.Deaths}");
         }
     }
 }

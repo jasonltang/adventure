@@ -50,7 +50,7 @@
     <Compile Include="Actions\NapAction.cs" />
     <Compile Include="Actions\ViewStatsAction.cs" />
     <Compile Include="Enemies\Enemy.cs" />
-    <Compile Include="Enemies\Rat.cs" />
+    <Compile Include="Enemies\EnemyFactory.cs" />
     <Compile Include="Locations\Battle.cs" />
     <Compile Include="Locations\Home.cs" />
     <Compile Include="InputReader.cs" />
