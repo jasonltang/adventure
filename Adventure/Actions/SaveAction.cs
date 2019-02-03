@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace Adventure.Actions
@@ -19,31 +16,35 @@ namespace Adventure.Actions
         public void Execute()
         {
             var player = Player.GetInstance();
-
             if (PLAINSAVE)
             {
-                using (StreamWriter sw = new StreamWriter("SaveFile.txt"))
+                using (StreamWriter sw = new StreamWriter("AdventureSaveFile.txt"))
                 {
-                    sw.WriteLine(nameof(player.MaxHitpoints) + " " + player.MaxHitpoints);
-                    sw.WriteLine(nameof(player.Hitpoints) + " " + player.Hitpoints);
-                    sw.WriteLine(nameof(player.Attack) + " " + player.Attack);
-                    sw.WriteLine(nameof(player.Defense) + " " + player.Defense);
-                    sw.WriteLine(nameof(player.Gold) + " " + player.Gold);
-                    sw.WriteLine(nameof(player.Deaths) + " " + player.Deaths);
+                    sw.WriteLine(nameof(player.ID) + "," + player.ID);
+                    sw.WriteLine(nameof(player.Name) + "," + player.Name);
+                    sw.WriteLine(nameof(player.MaxHitpoints) + "," + player.MaxHitpoints);
+                    sw.WriteLine(nameof(player.Hitpoints) + "," + player.Hitpoints);
+                    sw.WriteLine(nameof(player.Attack) + "," + player.Attack);
+                    sw.WriteLine(nameof(player.Defense) + "," + player.Defense);
+                    sw.WriteLine(nameof(player.Gold) + "," + player.Gold);
+                    sw.WriteLine(nameof(player.Deaths) + "," + player.Deaths);
                 }
             }
             else
             {
                 using (StreamWriter sw = new StreamWriter("AdventureSaveFile.txt"))
                 {
-                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.MaxHitpoints) + " " + player.MaxHitpoints)));
-                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Hitpoints) + " " + player.Hitpoints)));
-                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Attack) + " " + player.Attack)));
-                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Defense) + " " + player.Defense)));
-                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Gold) + " " + player.Gold)));
-                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Deaths) + " " + player.Deaths)));
+                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.ID) + "," + player.ID)));
+                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Name) + "," + player.Name)));
+                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.MaxHitpoints) + "," + player.MaxHitpoints)));
+                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Hitpoints) + "," + player.Hitpoints)));
+                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Attack) + "," + player.Attack)));
+                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Defense) + "," + player.Defense)));
+                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Gold) + "," + player.Gold)));
+                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Deaths) + "," + player.Deaths)));
                 }
             }
+            Console.WriteLine("Progress saved successfully!");
         }
     }
 }

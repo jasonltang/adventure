@@ -1,12 +1,9 @@
-﻿// Todo: Make coins useful
-// Todo: Find a way to train stats
-// Todo: Make attacks random?
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// Todo list
+// Make the web service call to high scores stop after two minutes if not retrieved by then (async method).
+// Add unit tests
+// Make coins useful
+// Think of a way to train stats
+// Make attacks random
 
 namespace Adventure
 {

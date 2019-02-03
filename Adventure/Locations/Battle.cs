@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Adventure.Actions;
 using Adventure.Enemies;
 
@@ -10,17 +6,6 @@ namespace Adventure.Locations
 {
     class Battle : Location
     {
-        //private static Battle _instance;
-        //public static Battle GetInstance()
-        //{
-        //    if (_instance == null) _instance = new Battle();
-        //    return _instance;
-        //}
-        //private Battle()
-        //{
-
-        //}
-
         public Battle()
         {
             _player = Player.GetInstance();

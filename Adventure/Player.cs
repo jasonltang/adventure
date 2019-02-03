@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Adventure.Locations;
 
 namespace Adventure
@@ -18,6 +14,7 @@ namespace Adventure
         }
         private Player()
         {
+            Name = "Player";
             MaxHitpoints = 10;
             Hitpoints = 10;
             Attack = 1;
@@ -27,9 +24,11 @@ namespace Adventure
             //Weapon = 0;
             //Armour = 0;
             Location = Home.GetInstance();
+            ID = Guid.NewGuid();
             Console.WriteLine(Location.LocationText);
         }
 
+        public string Name;
         public int MaxHitpoints;
         public int Hitpoints;
         public int Attack;
@@ -39,6 +38,7 @@ namespace Adventure
         //int Weapon { get; set; }
         //int Armour { get; set; }
         public Location Location { get; set; }
+        public Guid ID;
         public Random Rng = new Random((int)DateTime.Now.Ticks);
     }
 }

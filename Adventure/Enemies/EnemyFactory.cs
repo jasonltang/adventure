@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Adventure.Enemies
 {
@@ -45,7 +41,7 @@ namespace Adventure.Enemies
             {
                 Name = "Bird",
                 Hitpoints = 2,
-                Attack = 10,
+                Attack = 1,
                 Defense = 0,
                 VictoryText = "You pluck the last feather off the bird.",
                 Gold = 1

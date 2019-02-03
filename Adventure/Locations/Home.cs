@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Adventure.Actions;
 
 namespace Adventure.Locations
@@ -28,9 +24,12 @@ namespace Adventure.Locations
                 {
                     new ChangeLocationAction(Park.GetInstance()),
                     new ViewStatsAction(),
+                    new ViewHighScoresAction(),
+                    new UploadHighScoreAction(),
                     new NapAction(),
                     new SaveAction(),
-                    new LoadAction()
+                    new LoadAction(),
+                    new ChangeNameAction(),
                 };
             }
         }

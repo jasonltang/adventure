@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Adventure.Actions
 {
@@ -16,7 +12,8 @@ namespace Adventure.Actions
         public void Execute()
         {
             var player = Player.GetInstance();
-            Console.WriteLine($"Player stats:");
+            Console.WriteLine($"PLAYER STATS");
+            Console.WriteLine($"Name: {player.Name}");
             Console.WriteLine($"Max hitpoints: {player.MaxHitpoints}");
             Console.WriteLine($"Hitpoints: {player.Hitpoints}");
             Console.WriteLine($"Attack: {player.Attack}");
