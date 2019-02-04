@@ -10,7 +10,12 @@ namespace Adventure.Locations
 
         public abstract List<IAction> AllowedActions { get; }
 
-        public virtual void PrintText()
+        public virtual string GetText()
+        {
+            return GetType().Name;
+        }
+
+        public void PrintText()
         {
             Console.WriteLine(LocationText);
         }

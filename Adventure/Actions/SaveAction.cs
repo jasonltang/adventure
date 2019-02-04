@@ -15,6 +15,15 @@ namespace Adventure.Actions
 
         public void Execute()
         {
+            if (File.Exists("AdventureSaveFile.txt"))
+            {
+                Console.WriteLine("There is already a save file. Do you want to overwrite? (Y/N)");
+                if (Console.ReadLine().ToUpper() != "Y")
+                {
+                    Console.WriteLine("Cancelled save.");
+                    return;
+                }
+            }
             var player = Player.GetInstance();
             if (PLAINSAVE)
             {
@@ -27,6 +36,7 @@ namespace Adventure.Actions
                     sw.WriteLine(nameof(player.Attack) + "," + player.Attack);
                     sw.WriteLine(nameof(player.Defense) + "," + player.Defense);
                     sw.WriteLine(nameof(player.Gold) + "," + player.Gold);
+                    sw.WriteLine(nameof(player.Confidence) + "," + player.Confidence);
                     sw.WriteLine(nameof(player.Deaths) + "," + player.Deaths);
                 }
             }
@@ -41,6 +51,7 @@ namespace Adventure.Actions
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Attack) + "," + player.Attack)));
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Defense) + "," + player.Defense)));
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Gold) + "," + player.Gold)));
+                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Confidence) + "," + player.Confidence)));
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Deaths) + "," + player.Deaths)));
                 }
             }

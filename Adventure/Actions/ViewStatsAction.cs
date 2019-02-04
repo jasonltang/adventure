@@ -19,6 +19,7 @@ namespace Adventure.Actions
             Console.WriteLine($"Attack: {player.Attack}");
             Console.WriteLine($"Defense: {player.Defense}");
             Console.WriteLine($"Gold: {player.Gold}");
+            Console.WriteLine($"Confidence: {player.Confidence}");
             Console.WriteLine($"Deaths: {player.Deaths}");
         }
     }

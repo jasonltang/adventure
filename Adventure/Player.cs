@@ -20,6 +20,7 @@ namespace Adventure
             Attack = 1;
             Defense = 0;
             Gold = 0;
+            Confidence = 0;
             Deaths = 0;
             //Weapon = 0;
             //Armour = 0;
@@ -34,6 +35,7 @@ namespace Adventure
         public int Attack;
         public int Defense;
         public int Gold;
+        public int Confidence;
         public int Deaths;
         //int Weapon { get; set; }
         //int Armour { get; set; }

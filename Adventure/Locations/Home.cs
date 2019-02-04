@@ -18,6 +18,11 @@ namespace Adventure.Locations
 
         public override string LocationText { get { return "You are at home. It is so nice..."; } }
 
+        public override string GetText()
+        {
+            return "Return home";
+        }
+
         public override List<IAction> AllowedActions { get
             {
                 return new List<IAction>()
@@ -30,6 +35,7 @@ namespace Adventure.Locations
                     new SaveAction(),
                     new LoadAction(),
                     new ChangeNameAction(),
+                    new AboutAction(),
                 };
             }
         }

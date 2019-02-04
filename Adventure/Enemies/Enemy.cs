@@ -2,7 +2,7 @@
 {
     public class Enemy
     {
-        public Enemy(string name, int hitpoints, int attack, int defense, string victoryText, int gold)
+        public Enemy(string name, int hitpoints, int attack, int defense, string victoryText, int gold, int confidence)
         {
             Name = name;
             Hitpoints = hitpoints;
@@ -10,6 +10,7 @@
             Defense = defense;
             VictoryText = victoryText;
             Gold = gold;
+            Confidence = confidence;
         }
 
         public string Name { get; }
@@ -18,5 +19,6 @@
         public int Defense { get; }
         public string VictoryText { get; }
         public int Gold { get; }
+        public int Confidence { get; }
     }
 }

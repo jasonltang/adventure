@@ -7,7 +7,7 @@ namespace Adventure.Actions
         private Location _location;
         public string GetText()
         {
-            return _location.GetType().Name;
+            return _location.GetText();
         }
         public ChangeLocationAction(Location location)
         {

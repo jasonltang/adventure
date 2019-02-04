@@ -26,8 +26,9 @@ namespace Adventure.Actions
             {
                 Console.WriteLine($"You have killed the {_enemy.Name}!");
                 Console.WriteLine(_enemy.VictoryText);
-                Console.WriteLine($"You receive {_enemy.Gold} gold.");
+                Console.WriteLine($"You gain {_enemy.Gold} gold and {_enemy.Confidence} confidence.");
                 _player.Gold += _enemy.Gold;
+                _player.Confidence += _enemy.Confidence;
                 Console.WriteLine();
                 new ChangeLocationAction(Park.GetInstance()).Execute();
                 return;
@@ -35,10 +36,11 @@ namespace Adventure.Actions
             EnemyAttackPlayer();
             if (IsPlayerDead())
             {
-                Console.WriteLine("You die!");
+                Console.WriteLine("You die and lose 10% of your confidence!");
                 Console.WriteLine();
                 _player.Deaths++;
                 _player.Hitpoints = _player.MaxHitpoints;
+                _player.Confidence = (int)(0.9 * _player.Confidence);
                 new ChangeLocationAction(Home.GetInstance()).Execute();
                 return;
             }

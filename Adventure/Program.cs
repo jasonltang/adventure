@@ -1,9 +1,10 @@
 ﻿// Todo list
-// Make the web service call to high scores stop after two minutes if not retrieved by then (async method).
-// Add unit tests
-// Make coins useful
-// Think of a way to train stats
+// Introduce 'confidence' and make deaths lose confidence
+// Make coins useful (atk and def same bonus)
 // Make attacks random
+// Think of a way to train stats
+// Add unit tests
+// Integrate with Jenkins
 
 namespace Adventure
 {

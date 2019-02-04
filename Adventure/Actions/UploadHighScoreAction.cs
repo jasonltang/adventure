@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using RestSharp;
 
 namespace Adventure.Actions
@@ -12,9 +13,27 @@ namespace Adventure.Actions
 
         public void Execute()
         {
-            Console.WriteLine("Uploading high score, please wait...");
             var player = Player.GetInstance();
-            var time = DateTime.Now.Ticks;
+            Console.WriteLine("Uploading high score, please wait...");
+            Task<IRestResponse> task = Task.Factory.StartNew(() => UploadToWebService());
+            task.Wait(120000);
+            if (!task.IsCompleted)
+            {
+                Console.WriteLine("Attempt to upload high scores timed out.");
+                return;
+            }
+            var response = task.Result;
+            if (!response.IsSuccessful)
+            {
+                Console.WriteLine("Couldn't communicate with web service to upload high score.");
+                return;
+            }
+            Console.WriteLine($"Uploaded high score ({player.Gold * 10}) successfully!");
+        }
+
+        private IRestResponse UploadToWebService()
+        {
+            var player = Player.GetInstance();
             var client = new RestClient("https://adventure-eca6.restdb.io/rest/highscores");
             var request = new RestRequest(Method.POST);
             request.AddHeader("cache-control", "no-cache");
@@ -26,15 +45,9 @@ namespace Adventure.Actions
                     ""PlayerID"":""{player.ID.ToString()}"",
                     ""Name"":""{player.Name}"",
                     ""Score"":""{player.Gold * 10}"",
-                    ""Time"":""{time}""}}",
+                    ""Time"":""{DateTime.Now.Ticks}""}}",
                 ParameterType.RequestBody);
-            IRestResponse response = client.Execute(request);
-            if (!response.IsSuccessful)
-            {
-                Console.WriteLine("Couldn't communicate with web service to upload high score.");
-                return;
-            }
-            Console.WriteLine("Uploaded high score successfully!");
+            return client.Execute(request);
         }
     }
 }

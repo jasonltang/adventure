@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions\AboutAction.cs" />
     <Compile Include="Actions\AttackAction.cs" />
     <Compile Include="Actions\ChangeLocationAction.cs" />
     <Compile Include="Actions\ChangeNameAction.cs" />

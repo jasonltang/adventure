@@ -6,7 +6,7 @@ namespace Adventure.Actions
     {
         public string GetText()
         {
-            return "Change Name";
+            return "Change name";
         }
 
         public void Execute()
@@ -17,6 +17,11 @@ namespace Adventure.Actions
             if (input.Length == 0)
             {
                 Console.WriteLine("Name must not be empty!");
+                return;
+            }
+            if (input.Length > 20)
+            {
+                Console.WriteLine("Name must be 20 characters (including spaces) or less!");
                 return;
             }
             player.Name = input;
