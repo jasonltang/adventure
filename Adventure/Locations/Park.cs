@@ -26,6 +26,7 @@ namespace Adventure.Locations
                 {
                     new ChangeLocationAction(Home.GetInstance()),
                     new ChangeLocationAction(new Battle()),
+                    new ChangeTrainingModeAction(),
                     new ViewStatsAction()
                 };
             }

@@ -27,8 +27,14 @@ namespace Adventure.Actions
                 Console.WriteLine($"You have killed the {_enemy.Name}!");
                 Console.WriteLine(_enemy.VictoryText);
                 Console.WriteLine($"You gain {_enemy.Gold} gold and {_enemy.Confidence} confidence.");
+                Console.WriteLine($"You gain some {_player.TrainingMode.ToString()} exp.");
                 _player.Gold += _enemy.Gold;
                 _player.Confidence += _enemy.Confidence;
+                var incrementedStatAndLevel = _player.IncrementStat(_enemy.Confidence);
+                if (!string.IsNullOrEmpty(incrementedStatAndLevel.Item1))
+                {
+                    Console.WriteLine($"Congratulations! Your {incrementedStatAndLevel.Item1} stat increased to level {incrementedStatAndLevel.Item2}.");
+                }
                 Console.WriteLine();
                 new ChangeLocationAction(Park.GetInstance()).Execute();
                 return;
@@ -49,7 +55,7 @@ namespace Adventure.Actions
 
         private void PlayerAttackEnemy()
         {
-            var attackDamage = Math.Max(0, _player.Attack - _enemy.Defense);
+            var attackDamage = Math.Max(0, (int)Math.Round(Helpers.Random(_player.Attack, _player.Attack)) - _enemy.Defense);
             _enemy.Hitpoints -= attackDamage;
             Console.WriteLine($"You hit {_enemy.Name} for {attackDamage} damage!");
         }
@@ -61,7 +67,7 @@ namespace Adventure.Actions
 
         private void EnemyAttackPlayer()
         {
-            var attackDamage = Math.Max(0, _enemy.Attack - _player.Defense);
+            var attackDamage = Math.Max(0, (int)Math.Round(Helpers.Random(_enemy.Attack, _enemy.Attack)) - _player.Defense);
             _player.Hitpoints -= attackDamage;
             Console.WriteLine($"{_enemy.Name} hits you for {attackDamage} damage!");
         }

@@ -1,8 +1,8 @@
 ﻿// Todo list
-// Introduce 'confidence' and make deaths lose confidence
-// Make coins useful (atk and def same bonus)
-// Make attacks random
-// Think of a way to train stats
+// Make coins useful (weapon shop, armour shop)
+// Add some more difficult monsters
+// Separate monsters by stage
+// Add bosses for each level
 // Add unit tests
 // Integrate with Jenkins
 

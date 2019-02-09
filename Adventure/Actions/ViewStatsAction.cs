@@ -14,10 +14,14 @@ namespace Adventure.Actions
             var player = Player.GetInstance();
             Console.WriteLine($"PLAYER STATS");
             Console.WriteLine($"Name: {player.Name}");
-            Console.WriteLine($"Max hitpoints: {player.MaxHitpoints}");
+            Console.WriteLine($"Max hitpoints: {player.MaxHitpoints} " +
+                $"(Current exp {player.HitpointsExp}, next level at {Helpers.GetExpForLevel[player.MaxHitpoints/10 + 1]})");
             Console.WriteLine($"Hitpoints: {player.Hitpoints}");
-            Console.WriteLine($"Attack: {player.Attack}");
-            Console.WriteLine($"Defense: {player.Defense}");
+            Console.WriteLine($"Attack: {player.Attack} " +
+                $"(Current exp {player.AttackExp}, next level at {Helpers.GetExpForLevel[player.Attack + 1]})");
+            Console.WriteLine($"Defense: {player.Defense} " +
+                $"(Current exp {player.DefenseExp}, next level at {Helpers.GetExpForLevel[player.Defense + 1]})");
+            Console.WriteLine($"Training mode: {player.TrainingMode}");
             Console.WriteLine($"Gold: {player.Gold}");
             Console.WriteLine($"Confidence: {player.Confidence}");
             Console.WriteLine($"Deaths: {player.Deaths}");

@@ -54,6 +54,10 @@ namespace Adventure.Actions
                         {
                             field.SetValue(player, Guid.Parse(fieldValue));
                         }
+                        else if (field.FieldType == typeof(TrainingMode))
+                        {
+                            field.SetValue(player, Enum.Parse(typeof(TrainingMode), fieldValue));
+                        }
                     }
                     catch (Exception)
                     {

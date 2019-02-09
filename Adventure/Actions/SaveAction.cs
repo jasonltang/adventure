@@ -35,6 +35,10 @@ namespace Adventure.Actions
                     sw.WriteLine(nameof(player.Hitpoints) + "," + player.Hitpoints);
                     sw.WriteLine(nameof(player.Attack) + "," + player.Attack);
                     sw.WriteLine(nameof(player.Defense) + "," + player.Defense);
+                    sw.WriteLine(nameof(player.HitpointsExp) + "," + player.HitpointsExp);
+                    sw.WriteLine(nameof(player.AttackExp) + "," + player.AttackExp);
+                    sw.WriteLine(nameof(player.DefenseExp) + "," + player.DefenseExp);
+                    sw.WriteLine(nameof(player.TrainingMode) + "," + player.TrainingMode);
                     sw.WriteLine(nameof(player.Gold) + "," + player.Gold);
                     sw.WriteLine(nameof(player.Confidence) + "," + player.Confidence);
                     sw.WriteLine(nameof(player.Deaths) + "," + player.Deaths);
@@ -50,6 +54,9 @@ namespace Adventure.Actions
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Hitpoints) + "," + player.Hitpoints)));
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Attack) + "," + player.Attack)));
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Defense) + "," + player.Defense)));
+                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.HitpointsExp) + "," + player.HitpointsExp)));
+                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.AttackExp) + "," + player.AttackExp)));
+                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.DefenseExp) + "," + player.DefenseExp)));
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Gold) + "," + player.Gold)));
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Confidence) + "," + player.Confidence)));
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Deaths) + "," + player.Deaths)));
