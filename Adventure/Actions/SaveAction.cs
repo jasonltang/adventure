@@ -35,6 +35,8 @@ namespace Adventure.Actions
                     sw.WriteLine(nameof(player.Hitpoints) + "," + player.Hitpoints);
                     sw.WriteLine(nameof(player.Attack) + "," + player.Attack);
                     sw.WriteLine(nameof(player.Defense) + "," + player.Defense);
+                    sw.WriteLine(nameof(player.Weapon) + "," + player.Weapon);
+                    sw.WriteLine(nameof(player.Armour) + "," + player.Armour);
                     sw.WriteLine(nameof(player.HitpointsExp) + "," + player.HitpointsExp);
                     sw.WriteLine(nameof(player.AttackExp) + "," + player.AttackExp);
                     sw.WriteLine(nameof(player.DefenseExp) + "," + player.DefenseExp);

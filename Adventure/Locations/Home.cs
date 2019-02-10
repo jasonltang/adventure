@@ -28,6 +28,7 @@ namespace Adventure.Locations
                 return new List<IAction>()
                 {
                     new ChangeLocationAction(Park.GetInstance()),
+                    new ChangeLocationAction(Shop.GetInstance()),
                     new ViewStatsAction(),
                     new ViewHighScoresAction(),
                     new UploadHighScoreAction(),

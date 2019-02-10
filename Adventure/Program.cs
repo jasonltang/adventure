@@ -1,8 +1,8 @@
 ﻿// Todo list
-// Make coins useful (weapon shop, armour shop)
-// Add some more difficult monsters
 // Separate monsters by stage
 // Add bosses for each level
+// Add some more difficult monsters
+// Introduce 'standard deviation' of attacks
 // Add unit tests
 // Integrate with Jenkins
 

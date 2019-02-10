@@ -21,6 +21,8 @@ namespace Adventure.Actions
                 $"(Current exp {player.AttackExp}, next level at {Helpers.GetExpForLevel[player.Attack + 1]})");
             Console.WriteLine($"Defense: {player.Defense} " +
                 $"(Current exp {player.DefenseExp}, next level at {Helpers.GetExpForLevel[player.Defense + 1]})");
+            Console.WriteLine($"Weapon: {Helpers.GetWeapon[player.Weapon].Name}");
+            Console.WriteLine($"Armour: {Helpers.GetArmour[player.Armour].Name}");
             Console.WriteLine($"Training mode: {player.TrainingMode}");
             Console.WriteLine($"Gold: {player.Gold}");
             Console.WriteLine($"Confidence: {player.Confidence}");

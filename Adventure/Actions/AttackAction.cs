@@ -55,8 +55,19 @@ namespace Adventure.Actions
 
         private void PlayerAttackEnemy()
         {
-            var attackDamage = Math.Max(0, (int)Math.Round(Helpers.Random(_player.Attack, _player.Attack)) - _enemy.Defense);
+            var attackDamage = Math.Max(
+                0,
+                (int)Math.Round(
+                    Helpers.RandomNormal(
+                        _player.Attack + Helpers.GetWeapon[_player.Weapon].Attack,
+                        _player.Attack + Helpers.GetWeapon[_player.Weapon].Attack))
+                    - _enemy.Defense);
             _enemy.Hitpoints -= attackDamage;
+            if (attackDamage == 0)
+            {
+                Console.WriteLine("You miss completely!");
+                return;
+            }
             Console.WriteLine($"You hit {_enemy.Name} for {attackDamage} damage!");
         }
 
@@ -67,8 +78,16 @@ namespace Adventure.Actions
 
         private void EnemyAttackPlayer()
         {
-            var attackDamage = Math.Max(0, (int)Math.Round(Helpers.Random(_enemy.Attack, _enemy.Attack)) - _player.Defense);
+            var attackDamage = Math.Max(
+                0,
+                (int)Math.Round(Helpers.RandomNormal(_enemy.Attack, _enemy.Attack))
+                    - (_player.Defense + Helpers.GetArmour[_player.Armour].Defense));
             _player.Hitpoints -= attackDamage;
+            if (attackDamage == 0)
+            {
+                Console.WriteLine($"{_enemy.Name} misses completely!");
+                return;
+            }
             Console.WriteLine($"{_enemy.Name} hits you for {attackDamage} damage!");
         }
 

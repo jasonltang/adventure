@@ -25,14 +25,14 @@ namespace Adventure
             Hitpoints = 10;
             Attack = 1;
             Defense = 1;
+            Weapon = 0;
+            Armour = 0;
             HitpointsExp = 0;
             AttackExp = 0;
             DefenseExp = 0;
             Gold = 0;
             Confidence = 0;
             Deaths = 0;
-            //Weapon = 0;
-            //Armour = 0;
             Location = Home.GetInstance();
             ID = Guid.NewGuid();
             Console.WriteLine(Location.LocationText);
@@ -43,6 +43,8 @@ namespace Adventure
         public int Hitpoints;
         public int Attack;
         public int Defense;
+        public int Weapon;
+        public int Armour;
         public int HitpointsExp = 0;
         public int AttackExp = 0;
         public int DefenseExp = 0;
@@ -50,8 +52,6 @@ namespace Adventure
         public int Gold;
         public int Confidence;
         public int Deaths;
-        //int Weapon { get; set; }
-        //int Armour { get; set; }
         public Location Location { get; set; }
         public Guid ID;
         public Random Rng = new Random((int)DateTime.Now.Ticks);

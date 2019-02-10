@@ -58,6 +58,9 @@
     <Compile Include="Actions\RunAction.cs" />
     <Compile Include="Actions\SaveAction.cs" />
     <Compile Include="Actions\NapAction.cs" />
+    <Compile Include="Actions\Shop\BuyArmourAction.cs" />
+    <Compile Include="Actions\Shop\BuyWeaponAction.cs" />
+    <Compile Include="Actions\Shop\ViewPricesAction.cs" />
     <Compile Include="Actions\UploadHighScoreAction.cs" />
     <Compile Include="Actions\ViewHighScoresAction.cs" />
     <Compile Include="Actions\ViewStatsAction.cs" />
@@ -70,6 +73,7 @@
     <Compile Include="Locations\Location.cs" />
     <Compile Include="Locations\Park.cs" />
     <Compile Include="Actions\IAction.cs" />
+    <Compile Include="Locations\Shop.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
