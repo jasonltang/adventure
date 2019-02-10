@@ -16,7 +16,7 @@ namespace Adventure.Actions
 
         public void Execute()
         {
-            Console.WriteLine("Getting high scores, please wait up to 2 minutes...");
+            Console.WriteLine("Getting high scores, which can take up to 2 minutes...");
             Task<IRestResponse> task = Task.Factory.StartNew(() => MakeWebServiceCall());
             task.Wait(120000);
             if (!task.IsCompleted)

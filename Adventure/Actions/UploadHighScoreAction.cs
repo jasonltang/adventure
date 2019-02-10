@@ -28,7 +28,7 @@ namespace Adventure.Actions
                 Console.WriteLine("Couldn't communicate with web service to upload high score.");
                 return;
             }
-            Console.WriteLine($"Uploaded high score ({player.Gold * 10}) successfully!");
+            Console.WriteLine($"Uploaded high score ({player.Confidence}) successfully!");
         }
 
         private IRestResponse UploadToWebService()
