@@ -14,6 +14,7 @@ namespace Adventure.Actions
             var player = Player.GetInstance();
             Console.WriteLine($"PLAYER STATS");
             Console.WriteLine($"Name: {player.Name}");
+            Console.WriteLine($"Area: {player.Area} (of 10)");
             Console.WriteLine($"Max hitpoints: {player.MaxHitpoints} " +
                 $"(Current exp {player.HitpointsExp}, next level at {Helpers.GetExpForLevel[player.MaxHitpoints/10 + 1]})");
             Console.WriteLine($"Hitpoints: {player.Hitpoints}");

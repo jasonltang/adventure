@@ -95,7 +95,7 @@ namespace Adventure
 
         public static Dictionary<int, Armour> GetArmour = new Dictionary<int, Armour>
         {
-            { 0, new Armour("None", 110, 0) },
+            { 0, new Armour("None", 0, 0) },
             { 1, new Armour("Jumper", 1, 10) },
             { 2, new Armour("Cardboard box", 3, 30)}
         };

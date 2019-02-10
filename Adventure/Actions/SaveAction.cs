@@ -31,6 +31,7 @@ namespace Adventure.Actions
                 {
                     sw.WriteLine(nameof(player.ID) + "," + player.ID);
                     sw.WriteLine(nameof(player.Name) + "," + player.Name);
+                    sw.WriteLine(nameof(player.Area) + "," + player.Area);
                     sw.WriteLine(nameof(player.MaxHitpoints) + "," + player.MaxHitpoints);
                     sw.WriteLine(nameof(player.Hitpoints) + "," + player.Hitpoints);
                     sw.WriteLine(nameof(player.Attack) + "," + player.Attack);
@@ -52,6 +53,7 @@ namespace Adventure.Actions
                 {
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.ID) + "," + player.ID)));
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Name) + "," + player.Name)));
+                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Area) + "," + player.Area)));
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.MaxHitpoints) + "," + player.MaxHitpoints)));
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Hitpoints) + "," + player.Hitpoints)));
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Attack) + "," + player.Attack)));

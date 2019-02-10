@@ -21,6 +21,7 @@ namespace Adventure
         private Player()
         {
             Name = "Player";
+            Area = 1;
             MaxHitpoints = 10;
             Hitpoints = 10;
             Attack = 1;
@@ -39,6 +40,7 @@ namespace Adventure
         }
 
         public string Name;
+        public int Area;
         public int MaxHitpoints;
         public int Hitpoints;
         public int Attack;

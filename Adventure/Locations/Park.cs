@@ -25,7 +25,7 @@ namespace Adventure.Locations
                 return new List<IAction>()
                 {
                     new ChangeLocationAction(Home.GetInstance()),
-                    new ChangeLocationAction(new Battle()),
+                    new ChangeLocationAction(new ParkBattle()),
                     new ChangeTrainingModeAction(),
                     new ViewStatsAction()
                 };

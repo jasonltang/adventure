@@ -4,9 +4,9 @@ using Adventure.Enemies;
 
 namespace Adventure.Locations
 {
-    class Battle : Location
+    class ParkBattle : Location
     {
-        public Battle()
+        public ParkBattle()
         {
             _player = Player.GetInstance();
             IEnemyFactory enemyFactory = new EnemyFactory();
@@ -14,6 +14,11 @@ namespace Adventure.Locations
         }
         private Enemy _enemy;
         private Player _player;
+
+        public override string GetText()
+        {
+            return "Look for something to kill";
+        }
 
         public override string LocationText
         {

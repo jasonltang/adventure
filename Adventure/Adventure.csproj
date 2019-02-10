@@ -54,6 +54,7 @@
     <Compile Include="Actions\ChangeLocationAction.cs" />
     <Compile Include="Actions\ChangeNameAction.cs" />
     <Compile Include="Actions\ChangeTrainingModeAction.cs" />
+    <Compile Include="Actions\GetTrialInfoAction.cs" />
     <Compile Include="Actions\LoadAction.cs" />
     <Compile Include="Actions\RunAction.cs" />
     <Compile Include="Actions\SaveAction.cs" />
@@ -67,13 +68,15 @@
     <Compile Include="Enemies\Enemy.cs" />
     <Compile Include="Enemies\EnemyFactory.cs" />
     <Compile Include="Helpers.cs" />
-    <Compile Include="Locations\Battle.cs" />
+    <Compile Include="Locations\ParkBattle.cs" />
     <Compile Include="Locations\Home.cs" />
     <Compile Include="InputReader.cs" />
     <Compile Include="Locations\Location.cs" />
     <Compile Include="Locations\Park.cs" />
     <Compile Include="Actions\IAction.cs" />
     <Compile Include="Locations\Shop.cs" />
+    <Compile Include="Locations\Trial.cs" />
+    <Compile Include="Locations\TrialBattle.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

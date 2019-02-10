@@ -33,10 +33,20 @@ namespace Adventure.Actions
                 var incrementedStatAndLevel = _player.IncrementStat(_enemy.Confidence);
                 if (!string.IsNullOrEmpty(incrementedStatAndLevel.Item1))
                 {
-                    Console.WriteLine($"Congratulations! Your {incrementedStatAndLevel.Item1} stat increased to level {incrementedStatAndLevel.Item2}.");
+                    Console.WriteLine($"Congratulations! Your {incrementedStatAndLevel.Item1} stat increased to {incrementedStatAndLevel.Item2}.");
                 }
                 Console.WriteLine();
-                new ChangeLocationAction(Park.GetInstance()).Execute();
+                if (_player.Location.ToString().Contains("ParkBattle"))
+                {
+                    new ChangeLocationAction(Park.GetInstance()).Execute();
+                }
+                else if (_player.Location.ToString().Contains("TrialBattle"))
+                {
+                    _player.Area++;
+                    Console.WriteLine($"Congratulations! You have advanced to area {_player.Area}! This area contains stronger monsters.");
+                    new ChangeLocationAction(Trial.GetInstance()).Execute();
+
+                }
                 return;
             }
             EnemyAttackPlayer();
@@ -88,7 +98,7 @@ namespace Adventure.Actions
                 Console.WriteLine($"{_enemy.Name} misses completely!");
                 return;
             }
-            Console.WriteLine($"{_enemy.Name} hits you for {attackDamage} damage!");
+            Console.WriteLine($"{_enemy.Name} hits you with its {_enemy.Weapon} for {attackDamage} damage!");
         }
 
         private bool IsPlayerDead()

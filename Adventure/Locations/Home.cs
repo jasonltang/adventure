@@ -33,6 +33,7 @@ namespace Adventure.Locations
                     new ViewHighScoresAction(),
                     new UploadHighScoreAction(),
                     new NapAction(),
+                    new ChangeLocationAction(Trial.GetInstance()),
                     new SaveAction(),
                     new LoadAction(),
                     new ChangeNameAction(),
