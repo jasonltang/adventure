@@ -4,6 +4,7 @@
 // Set a ceiling for leveling up, i.e. don't throw error when beating lv 10
 // Add unit tests
 // Integrate with Jenkins
+// Add a player arena
 
 namespace Adventure
 {
