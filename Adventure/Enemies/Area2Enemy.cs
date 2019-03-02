@@ -14,25 +14,135 @@ namespace Adventure.Enemies
                 {
                     new Enemy
                     (
-                        name: "Rat2",
-                        hitpoints: 5,
-                        attack: 1,
-                        defense: 0,
-                        weapon: "Big Teeth",
-                        victoryText: "Killing the tiny rat really makes you feel tough.",
-                        gold: 2,
-                        confidence: 1
+                        name: "Mushroom",
+                        hitpoints: 6,
+                        attack: 2,
+                        defense: 2,
+                        weapon: "Spores",
+                        victoryText: "Even though it looks tasty, you avoid eating the mushroom.",
+                        gold: 8,
+                        confidence: 4
                     ),
                     new Enemy
                     (
-                        name: "Bird2",
-                        hitpoints: 2,
-                        attack: 1,
+                        name: "Monkey",
+                        hitpoints: 12,
+                        attack: 3,
+                        defense: 2,
+                        weapon: "Dexterity",
+                        victoryText: "The monkey swings back into the branches.",
+                        gold: 8,
+                        confidence: 5
+                    ),
+                    new Enemy
+                    (
+                        name: "Falling Tree",
+                        hitpoints: 4,
+                        attack: 20,
                         defense: 0,
-                        weapon: "Beak",
-                        victoryText: "You pluck the last feather off the bird.",
-                        gold: 1,
-                        confidence: 1
+                        weapon: "Potential Energy",
+                        victoryText: "Your reflexes allow you to jump out of the way.",
+                        gold: 7,
+                        confidence: 5
+                    ),
+                    new Enemy
+                    (
+                        name: "Hiker",
+                        hitpoints: 20,
+                        attack: 4,
+                        defense: 2,
+                        weapon: "Friendly Greeting",
+                        victoryText: "Your reflexes allow you to jump out of the way.",
+                        gold: 15,
+                        confidence: 8
+                    ),
+                    new Enemy
+                    (
+                        name: "Fox",
+                        hitpoints: 10,
+                        attack: 5,
+                        defense: 3,
+                        weapon: "Slyness",
+                        victoryText: "You are like the grapes, just out of reach for the fox.",
+                        gold: 10,
+                        confidence: 12
+                    ),
+                    new Enemy
+                    (
+                        name: "Eagle",
+                        hitpoints: 8,
+                        attack: 5,
+                        defense: 8,
+                        weapon: "Talons",
+                        victoryText: "Finally the eagle falls out of the sky.",
+                        gold: 8,
+                        confidence: 20
+                    ),
+                    new Enemy
+                    (
+                        name: "Moose",
+                        hitpoints: 22,
+                        attack: 4,
+                        defense: 3,
+                        weapon: "Antlers",
+                        victoryText: "The moose moos as it accepts the bad news.",
+                        gold: 8,
+                        confidence: 20
+                    ),
+                    new Enemy
+                    (
+                        name: "Snake",
+                        hitpoints: 6,
+                        attack: 8,
+                        defense: 8,
+                        weapon: "Constriction",
+                        victoryText: "You shed its skin.",
+                        gold: 11,
+                        confidence: 17
+                    ),
+                    new Enemy
+                    (
+                        name: "Panda",
+                        hitpoints: 50,
+                        attack: 5,
+                        defense: 0,
+                        weapon: "Bamboo Shoots",
+                        victoryText: "It goes back to eating its bamboo shoots.",
+                        gold: 20,
+                        confidence: 10
+                    ),
+                    new Enemy
+                    (
+                        name: "Bear",
+                        hitpoints: 25,
+                        attack: 4,
+                        defense: 8,
+                        weapon: "Claws",
+                        victoryText: "There's a bear in there, and a chair as well.",
+                        gold: 12,
+                        confidence: 30
+                    ),
+                    new Enemy
+                    (
+                        name: "Koala",
+                        hitpoints: 15,
+                        attack: 20,
+                        defense: 1,
+                        weapon: "Cuteness",
+                        victoryText: "You were unlucky to meet this koala during its 4 waking hours.",
+                        gold: 23,
+                        confidence: 9
+                    ),
+                    new Enemy
+                    (
+                        name: "Tiger",
+                        hitpoints: 30,
+                        attack: 17,
+                        defense: 5,
+                        weapon: "Camouflage",
+                        victoryText: "Wow, that was scary.",
+                        gold: 45,
+                        confidence: 40
                     ),
                 };
         }

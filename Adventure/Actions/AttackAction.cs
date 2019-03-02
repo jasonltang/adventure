@@ -27,14 +27,8 @@ namespace Adventure.Actions
                 Console.WriteLine($"You have killed the {_enemy.Name}!");
                 Console.WriteLine(_enemy.VictoryText);
                 Console.WriteLine($"You gain {_enemy.Gold} gold and {_enemy.Confidence} confidence.");
-                Console.WriteLine($"You gain some {_player.TrainingMode.ToString()} exp.");
                 _player.Gold += _enemy.Gold;
                 _player.Confidence += _enemy.Confidence;
-                var incrementedStatAndLevel = _player.IncrementStat(_enemy.Confidence);
-                if (!string.IsNullOrEmpty(incrementedStatAndLevel.Item1))
-                {
-                    Console.WriteLine($"Congratulations! Your {incrementedStatAndLevel.Item1} stat increased to {incrementedStatAndLevel.Item2}.");
-                }
                 Console.WriteLine();
                 PostBattleActions();
                 return;
@@ -55,12 +49,13 @@ namespace Adventure.Actions
 
         private void PlayerAttackEnemy()
         {
+            int totalAttack = _player.Attack + Helpers.GetWeapon[_player.Weapon].Attack;
             var attackDamage = Math.Max(
                 0,
-                (int)Math.Round(
+                Convert.ToInt32(
                     Helpers.RandomNormal(
-                        _player.Attack + Helpers.GetWeapon[_player.Weapon].Attack,
-                        _player.Attack + Helpers.GetWeapon[_player.Weapon].Attack))
+                        totalAttack,
+                        Math.Sqrt(totalAttack)))
                     - _enemy.Defense);
             _enemy.Hitpoints -= attackDamage;
             if (attackDamage == 0)
@@ -99,8 +94,8 @@ namespace Adventure.Actions
         private void PrintDialogue()
         {
             Console.WriteLine();
-            Console.WriteLine($"{_enemy.Name}'s hitpoints: {_enemy.Hitpoints}");
             Console.WriteLine($"Your hitpoints: { _player.Hitpoints }");
+            Console.WriteLine($"{_enemy.Name}'s hitpoints: {_enemy.Hitpoints}");
         }
 
         private void PostBattleActions()
@@ -114,8 +109,11 @@ namespace Adventure.Actions
                 if (_player.Area != 10)
                 {
                     _player.Area++;
-                    Console.WriteLine($"Congratulations! You have advanced to area {_player.Area}!\n" +
-                        $"This area contains stronger monsters.");
+                    _player.MaxHitpoints = Helpers.GetHitpointsByArea[_player.Area];
+                    Console.WriteLine($"Congratulations! You have advanced to area {_player.Area}!");
+                    Console.WriteLine($"Your max hitpoints increases to {_player.Hitpoints}.");
+                    Console.WriteLine($"You wonder how your confidence rates on the high score list now.");
+                    Console.WriteLine($"This area contains stronger enemies.");
                     _player.Hitpoints = _player.MaxHitpoints;
                     new ChangeLocationAction(Home.GetInstance()).Execute();
                 }

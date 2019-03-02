@@ -36,7 +36,14 @@ namespace Adventure.Actions.Shop
             var oldArmour = player.Armour;
             player.Armour = number;
             player.Gold -= Helpers.GetArmour[number].Price;
-            Console.WriteLine($"You take off your {Helpers.GetArmour[oldArmour].Name} and put on the {Helpers.GetArmour[player.Armour].Name}!");
+            if (Helpers.GetArmour[oldArmour].Name == "None")
+            {
+                Console.WriteLine($"You put on the {Helpers.GetArmour[player.Armour].Name}!");
+            }
+            else
+            {
+                Console.WriteLine($"You take off your {Helpers.GetArmour[oldArmour].Name} and put on the {Helpers.GetArmour[player.Armour].Name}!");
+            }
         }
     }
 }

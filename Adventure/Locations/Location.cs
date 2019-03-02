@@ -17,7 +17,10 @@ namespace Adventure.Locations
 
         public void PrintText()
         {
-            Console.WriteLine(LocationText);
+            if (LocationText != "")
+            {
+                Console.WriteLine(LocationText);
+            }
         }
     }
 }

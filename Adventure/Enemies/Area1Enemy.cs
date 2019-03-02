@@ -22,7 +22,7 @@ namespace Adventure.Enemies
                     new Enemy
                     (
                         name: "Tortoise",
-                        hitpoints: 10,
+                        hitpoints: 6,
                         attack: 1,
                         defense: 2,
                         weapon: "Slow and Steady",
@@ -33,9 +33,9 @@ namespace Adventure.Enemies
                     new Enemy
                     (
                         name: "Fish",
-                        hitpoints: 4,
+                        hitpoints: 3,
                         attack: 2,
-                        defense: 1,
+                        defense: 0,
                         weapon: "Swimming Around",
                         victoryText: "It nearly tricked you into jumping into the pond, but luckily you were too smart for it.",
                         gold: 2,
@@ -43,7 +43,7 @@ namespace Adventure.Enemies
                     ),
                     new Enemy
                     (
-                        name: "Swing set",
+                        name: "Swing Set",
                         hitpoints: 2,
                         attack: 5,
                         defense: 0,
@@ -56,11 +56,11 @@ namespace Adventure.Enemies
                     (
                         name: "Rat",
                         hitpoints: 4,
-                        attack: 4,
+                        attack: 2,
                         defense: 0,
-                        weapon: "Sharp teeth",
+                        weapon: "Sharp Teeth",
                         victoryText: "Luckily you didn't catch a disease from it.",
-                        gold: 4,
+                        gold: 3,
                         confidence: 1
                     ),
                     new Enemy
@@ -68,7 +68,7 @@ namespace Adventure.Enemies
                         name: "Donkey",
                         hitpoints: 6,
                         attack: 2,
-                        defense: 1,
+                        defense: 0,
                         weapon: "Triumphal Entry",
                         victoryText: "What is a donkey doing in a park?",
                         gold: 3,
@@ -78,10 +78,10 @@ namespace Adventure.Enemies
                     (
                         name: "Baby",
                         hitpoints: 7,
-                        attack: 3,
+                        attack: 2,
                         defense: 0,
                         weapon: "Crying",
-                        victoryText: "Finally you stick a dummy in her mouth.",
+                        victoryText: "You shut the unattended baby up by sticking a dummy in her mouth.",
                         gold: 3,
                         confidence: 1
                     ),
@@ -99,20 +99,20 @@ namespace Adventure.Enemies
                     new Enemy
                     (
                         name: "Dog",
-                        hitpoints: 9,
-                        attack: 4,
-                        defense: 2,
-                        weapon: "Loud barking",
+                        hitpoints: 6,
+                        attack: 3,
+                        defense: 1,
+                        weapon: "Loud Barking",
                         victoryText: "Its bark is worse than its bite.",
                         gold: 4,
                         confidence: 2
                     ),
                     new Enemy
                     (
-                        name: "Homeless guy",
-                        hitpoints: 15,
+                        name: "Homeless Guy",
+                        hitpoints: 9,
                         attack: 2,
-                        defense: 3,
+                        defense: 1,
                         weapon: "Nonsensical Yelling",
                         victoryText: "Finally you win the war of words.",
                         gold: 1,
@@ -121,10 +121,10 @@ namespace Adventure.Enemies
                     new Enemy
                     (
                         name: "Pigeon",
-                        hitpoints: 4,
-                        attack: 7,
+                        hitpoints: 3,
+                        attack: 4,
                         defense: 0,
-                        weapon: "Random flapping",
+                        weapon: "Random Flapping",
                         victoryText: "You kick the pigeon and it flies off.",
                         gold: 4,
                         confidence: 2
@@ -132,24 +132,24 @@ namespace Adventure.Enemies
                     new Enemy
                     (
                         name: "Cat",
-                        hitpoints: 8,
+                        hitpoints: 6,
                         attack: 10,
                         defense: 1,
                         weapon: "Sharp claws",
                         victoryText: "You have no idea where this cat came from.",
-                        gold: 10,
+                        gold: 8,
                         confidence: 5
                     ),
                     new Enemy
                     (
                         name: "Mother",
-                        hitpoints: 20,
+                        hitpoints: 10,
                         attack: 4,
-                        defense: 4,
+                        defense: 3,
                         weapon: "Protectiveness",
                         victoryText: "Finally, she takes the stroller and flees the park.",
-                        gold: 20,
-                        confidence: 10
+                        gold: 14,
+                        confidence: 9
                     ),
                 };
         }

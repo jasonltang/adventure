@@ -36,7 +36,15 @@ namespace Adventure.Actions.Shop
             var oldWeapon = player.Weapon;
             player.Weapon = number;
             player.Gold -= Helpers.GetWeapon[number].Price;
-            Console.WriteLine($"You throw out your {Helpers.GetWeapon[oldWeapon].Name} and wield the {Helpers.GetWeapon[player.Weapon].Name}!");
+
+            if (Helpers.GetWeapon[oldWeapon].Name == "None")
+            {
+                Console.WriteLine($"You wield the {Helpers.GetWeapon[player.Weapon].Name}!");
+            }
+            else
+            {
+                Console.WriteLine($"You throw out your {Helpers.GetWeapon[oldWeapon].Name} and wield the {Helpers.GetWeapon[player.Weapon].Name}!");
+            }
         }
     }
 }

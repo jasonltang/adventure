@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Adventure.Actions;
 using Adventure.Enemies;
 
@@ -17,20 +18,52 @@ namespace Adventure.Locations
 
         public override string GetText()
         {
-            return "Look for something to kill";
+            return "Search for something to fight";
         }
 
         public override string LocationText
         {
             get
             {
-                var vowels = new HashSet<char>() { 'A', 'E', 'I', 'O', 'U' };
-                string article =  vowels.Contains(_enemy.Name[0]) ? "an" : "a";
-                return "You look for something to kill. \n" +
-                    $"You find {article} {_enemy.Name}!\n" +
-                    $"\n" +
-                    $"{_enemy.Name}'s hitpoints: {_enemy.Hitpoints}\n" +
-                    $"Your hitpoints: {_player.Hitpoints}";
+                int numOptions = 100;
+                int rand = _player.Rng.Next();
+                if (rand % numOptions > 2)
+                {
+                    var vowels = new HashSet<char>() { 'A', 'E', 'I', 'O', 'U' };
+                    string article = vowels.Contains(_enemy.Name[0]) ? "an" : "a";
+                    return "You look for something to kill. \n" +
+                        $"You find {article} {_enemy.Name}!\n" +
+                        $"\n" +
+                        $"Your hitpoints: {_player.Hitpoints}\n" +
+                        $"{_enemy.Name}'s hitpoints: {_enemy.Hitpoints}";
+                }
+                else
+                {
+                    if (rand % numOptions == 0)
+                    {
+                        _player.Attack++;
+                        Console.WriteLine("You come across a large rock.\n" +
+                            "You throw it as far as you can and feel stronger.\n" +
+                            $"Attack increased to {_player.Attack}!\n");
+                    }
+                    else if (rand % numOptions == 1)
+                    {
+                        _player.Defense++;
+                        Console.WriteLine("You come across a large rock.\n" +
+                            "It starts rolling towards you and you jump out of the way quickly.\n" +
+                            "Defense increased by 1!\n");
+                    }
+                    else if (rand % numOptions == 2)
+                    {
+                        _player.MaxHitpoints++;
+                        Console.WriteLine("You come across a large rock.\n" +
+                            "You take a nap on it and feel refreshed.\n" +
+                            "Hitpoints increased by 1!\n");
+                    }
+
+                    new ChangeLocationAction(Park.GetInstance()).Execute();
+                    return "";
+                }
             }
         }
 

@@ -26,8 +26,8 @@ namespace Adventure.Locations
             {
                 return $"You start a battle with {_enemy.Name}!\n" +
                     $"\n" +
-                    $"{_enemy.Name}'s hitpoints: {_enemy.Hitpoints}\n" +
-                    $"Your hitpoints: {_player.Hitpoints}";
+                    $"Your hitpoints: {_player.Hitpoints}\n" +
+                    $"{_enemy.Name}'s hitpoints: {_enemy.Hitpoints}";                    ;
             }
         }
 

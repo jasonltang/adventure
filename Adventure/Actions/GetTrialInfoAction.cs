@@ -15,10 +15,12 @@ namespace Adventure.Actions
             switch (player.Area)
             {
                 case 1:
-                    Console.WriteLine($"Here's the info for trial 1.");
+                    Console.WriteLine($"Salespeople are very resilient,\n" +
+                        $"so it will take a lot of persistence to bring one down.");
                     break;
                 case 2:
-                    Console.WriteLine($"Here's the info for trial 2.");
+                    Console.WriteLine($"Jane Goodall is one of the leading experts on chimpanzees.\n" +
+                        $"You will need well balanced stats to defeat her.");
                     break;
                 case 3:
                     Console.WriteLine($"Here's the info for trial 3.");

@@ -53,7 +53,6 @@
     <Compile Include="Actions\AttackAction.cs" />
     <Compile Include="Actions\ChangeLocationAction.cs" />
     <Compile Include="Actions\ChangeNameAction.cs" />
-    <Compile Include="Actions\ChangeTrainingModeAction.cs" />
     <Compile Include="Actions\GetTrialInfoAction.cs" />
     <Compile Include="Actions\LoadAction.cs" />
     <Compile Include="Actions\RunAction.cs" />
@@ -65,6 +64,7 @@
     <Compile Include="Actions\UploadHighScoreAction.cs" />
     <Compile Include="Actions\ViewHighScoresAction.cs" />
     <Compile Include="Actions\ViewStatsAction.cs" />
+    <Compile Include="Enemies\Area10Enemy.cs" />
     <Compile Include="Enemies\Area1Enemy.cs" />
     <Compile Include="Enemies\Area2Enemy.cs" />
     <Compile Include="Enemies\Area3Enemy.cs" />
@@ -74,7 +74,6 @@
     <Compile Include="Enemies\Area7Enemy.cs" />
     <Compile Include="Enemies\Area8Enemy.cs" />
     <Compile Include="Enemies\Area9Enemy.cs" />
-    <Compile Include="Enemies\Area10Enemy.cs" />
     <Compile Include="Enemies\Enemy.cs" />
     <Compile Include="Enemies\EnemyFactory.cs" />
     <Compile Include="Enemies\TrialEnemy.cs" />
