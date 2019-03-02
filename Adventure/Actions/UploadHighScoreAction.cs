@@ -44,7 +44,7 @@ namespace Adventure.Actions
                 $@"{{
                     ""PlayerID"":""{player.ID.ToString()}"",
                     ""Name"":""{player.Name}"",
-                    ""Score"":""{player.Gold * 10}"",
+                    ""Score"":""{player.Confidence}"",
                     ""Time"":""{DateTime.Now.Ticks}""}}",
                 ParameterType.RequestBody);
             return client.Execute(request);

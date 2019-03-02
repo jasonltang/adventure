@@ -24,8 +24,10 @@ namespace Adventure.Locations
         {
             get
             {
+                var vowels = new HashSet<char>() { 'A', 'E', 'I', 'O', 'U' };
+                string article =  vowels.Contains(_enemy.Name[0]) ? "an" : "a";
                 return "You look for something to kill. \n" +
-                    $"You find a {_enemy.Name}!\n" +
+                    $"You find {article} {_enemy.Name}!\n" +
                     $"\n" +
                     $"{_enemy.Name}'s hitpoints: {_enemy.Hitpoints}\n" +
                     $"Your hitpoints: {_player.Hitpoints}";
@@ -39,7 +41,7 @@ namespace Adventure.Locations
                 return new List<IAction>()
                 {
                     new AttackAction(_enemy),
-                    new RunAction(),
+                    new RunAction("Park"),
                     new ViewStatsAction()
                 };
             }

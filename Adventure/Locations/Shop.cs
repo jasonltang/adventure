@@ -18,12 +18,14 @@ namespace Adventure.Locations
         }
 
         public override string LocationText {get { return
-                    "You walk into the shop. A tough-looking guy comes out. He asks," +
-                    "\"What would you like to buy?\""; } }
+                    "You walk into the shop. A tough-looking guy comes out.\n" +
+                    "He asks, \"What would you like to buy?\"\n" +
+                    "\n" +
+                    "Your gold: " + Player.GetInstance().Gold; } }
 
         public override string GetText()
         {
-            return "Weapons and armour shop";
+            return "Buy weapons and armour";
         }
 
         public override List<IAction> AllowedActions

@@ -36,17 +36,7 @@ namespace Adventure.Actions
                     Console.WriteLine($"Congratulations! Your {incrementedStatAndLevel.Item1} stat increased to {incrementedStatAndLevel.Item2}.");
                 }
                 Console.WriteLine();
-                if (_player.Location.ToString().Contains("ParkBattle"))
-                {
-                    new ChangeLocationAction(Park.GetInstance()).Execute();
-                }
-                else if (_player.Location.ToString().Contains("TrialBattle"))
-                {
-                    _player.Area++;
-                    Console.WriteLine($"Congratulations! You have advanced to area {_player.Area}! This area contains stronger monsters.");
-                    new ChangeLocationAction(Trial.GetInstance()).Execute();
-
-                }
+                PostBattleActions();
                 return;
             }
             EnemyAttackPlayer();
@@ -90,7 +80,7 @@ namespace Adventure.Actions
         {
             var attackDamage = Math.Max(
                 0,
-                (int)Math.Round(Helpers.RandomNormal(_enemy.Attack, _enemy.Attack))
+                (int)Math.Round(Helpers.RandomNormal(_enemy.Attack, _enemy.AttackStdev))
                     - (_player.Defense + Helpers.GetArmour[_player.Armour].Defense));
             _player.Hitpoints -= attackDamage;
             if (attackDamage == 0)
@@ -111,6 +101,32 @@ namespace Adventure.Actions
             Console.WriteLine();
             Console.WriteLine($"{_enemy.Name}'s hitpoints: {_enemy.Hitpoints}");
             Console.WriteLine($"Your hitpoints: { _player.Hitpoints }");
+        }
+
+        private void PostBattleActions()
+        {
+            if (_player.Location.ToString().Contains("ParkBattle"))
+            {
+                new ChangeLocationAction(Park.GetInstance()).Execute();
+            }
+            else if (_player.Location.ToString().Contains("TrialBattle"))
+            {
+                if (_player.Area != 10)
+                {
+                    _player.Area++;
+                    Console.WriteLine($"Congratulations! You have advanced to area {_player.Area}!\n" +
+                        $"This area contains stronger monsters.");
+                    _player.Hitpoints = _player.MaxHitpoints;
+                    new ChangeLocationAction(Home.GetInstance()).Execute();
+                }
+                else
+                {
+                    _player.Reset();
+                    int confidenceBonus = 1000;
+                    _player.Confidence += confidenceBonus;
+                    Console.WriteLine($"You have beaten the final boss! You gain {confidenceBonus} confidence and you have been returned to area 1 to start the journey again.");
+                }
+            }
         }
     }
 }

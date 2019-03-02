@@ -36,7 +36,6 @@ namespace Adventure
             Deaths = 0;
             Location = Home.GetInstance();
             ID = Guid.NewGuid();
-            Console.WriteLine(Location.LocationText);
         }
 
         public string Name;
@@ -95,6 +94,23 @@ namespace Adventure
                     break;
             }
             return new Tuple<string, int>(statLevelled, newLevel);
+        }
+
+        // Called when final trial battle is beaten.
+        public void Reset()
+        {
+            Area = 1;
+            MaxHitpoints = 10;
+            Hitpoints = 10;
+            Attack = 1;
+            Defense = 1;
+            Weapon = 0;
+            Armour = 0;
+            HitpointsExp = 0;
+            AttackExp = 0;
+            DefenseExp = 0;
+            Gold = 0;
+            Location = Home.GetInstance();
         }
     }
 }

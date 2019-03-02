@@ -38,7 +38,7 @@ namespace Adventure.Locations
                 return new List<IAction>()
                 {
                     new AttackAction(_enemy),
-                    new RunAction(),
+                    new RunAction("Trial"),
                     new ViewStatsAction()
                 };
             }

@@ -28,6 +28,8 @@ namespace Adventure.Actions.Shop
             {
                 Console.WriteLine($"{a.Key}. {a.Value.Name}  {a.Value.Price}");
             }
+            Console.WriteLine();
+            Console.WriteLine($"Your gold: {Player.GetInstance().Gold}");
         }
     }
 }
