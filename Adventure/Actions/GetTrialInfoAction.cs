@@ -16,35 +16,26 @@ namespace Adventure.Actions
             {
                 case 1:
                     Console.WriteLine($"Salespeople are very resilient,\n" +
-                        $"so it will take a lot of persistence to bring one down.");
+                        $"so it will take a lot of endurance to bring one down.");
                     break;
                 case 2:
                     Console.WriteLine($"Jane Goodall is one of the leading experts on chimpanzees.\n" +
                         $"You will need well balanced stats to defeat her.");
                     break;
                 case 3:
-                    Console.WriteLine($"Here's the info for trial 3.");
+                    Console.WriteLine($"You will face a mob of students.\n" +
+                        $"Their attacks are highly variable, so concentrate on having a good weapon.");
                     break;
                 case 4:
-                    Console.WriteLine($"Here's the info for trial 4.");
+                    Console.WriteLine($"Adolf Hitler may appear weak, but has extremely strong defenses.\n" +
+                        $"Concentrate on hitting him hard.");
                     break;
                 case 5:
-                    Console.WriteLine($"Here's the info for trial 5.");
+                    Console.WriteLine($"Your final challenge is to kill the White Whale." +
+                        $"You will need the best weapon and armour you can get. Good luck!");
                     break;
-                case 6:
-                    Console.WriteLine($"Here's the info for trial 6.");
-                    break;
-                case 7:
-                    Console.WriteLine($"Here's the info for trial 7.");
-                    break;
-                case 8:
-                    Console.WriteLine($"Here's the info for trial 8.");
-                    break;
-                case 9:
-                    Console.WriteLine($"Here's the info for trial 9.");
-                    break;
-                case 10:
-                    Console.WriteLine($"Here's the info for trial 10.");
+                default:
+                    Console.WriteLine($"If you see this, it is a bug. Please report it to the developer. Code: 1");
                     break;
             }
             

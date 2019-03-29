@@ -4,7 +4,7 @@ namespace Adventure.Actions
 {
     public class ViewStatsAction : IAction
     {
-        private const int charsToPad = 15;
+        private const int charsToPad = 19;
 
         public string GetText()
         {
@@ -16,7 +16,7 @@ namespace Adventure.Actions
             var player = Player.GetInstance();
             Console.WriteLine("PLAYER STATS");
             Console.WriteLine("Name:".PadRight(charsToPad) + player.Name);
-            Console.WriteLine("Area:".PadRight(charsToPad) + player.Area + " (of 10)");
+            Console.WriteLine("Area:".PadRight(charsToPad) + player.Area + " (of 5)");
             Console.WriteLine("Max hitpoints:".PadRight(charsToPad) + player.MaxHitpoints);
             Console.WriteLine("Hitpoints:".PadRight(charsToPad) + player.Hitpoints);
             Console.WriteLine("Attack:".PadRight(charsToPad) + player.Attack);
@@ -26,6 +26,7 @@ namespace Adventure.Actions
             Console.WriteLine("Gold:".PadRight(charsToPad) + player.Gold);
             Console.WriteLine("Confidence:".PadRight(charsToPad) + player.Confidence);
             Console.WriteLine("Deaths:".PadRight(charsToPad) + player.Deaths);
+            Console.WriteLine("Game completions:".PadRight(charsToPad) + player.GameCompletions);
         }
     }
 }

@@ -24,6 +24,7 @@ namespace Adventure
             Gold = 0;
             Confidence = 0;
             Deaths = 0;
+            GameCompletions = 0;
             Location = Home.GetInstance();
             ID = Guid.NewGuid();
         }
@@ -39,6 +40,7 @@ namespace Adventure
         public int Gold;
         public int Confidence;
         public int Deaths;
+        public int GameCompletions;
         public Location Location { get; set; }
         public Guid ID;
         public Random Rng = new Random((int)DateTime.Now.Ticks);

@@ -62,6 +62,7 @@ namespace Adventure.Actions
                     }
                 }
             }
+            Console.ForegroundColor = Helpers.GetTextColourByArea(player.Area);
             Console.WriteLine("Progress loaded successfully!");
         }
     }

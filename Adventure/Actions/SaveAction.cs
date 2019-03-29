@@ -41,6 +41,7 @@ namespace Adventure.Actions
                     sw.WriteLine(nameof(player.Gold) + "," + player.Gold);
                     sw.WriteLine(nameof(player.Confidence) + "," + player.Confidence);
                     sw.WriteLine(nameof(player.Deaths) + "," + player.Deaths);
+                    sw.WriteLine(nameof(player.GameCompletions) + "," + player.GameCompletions);
                 }
             }
             else
@@ -59,6 +60,7 @@ namespace Adventure.Actions
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Gold) + "," + player.Gold)));
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Confidence) + "," + player.Confidence)));
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.Deaths) + "," + player.Deaths)));
+                    sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.GameCompletions) + "," + player.GameCompletions)));
                 }
             }
             Console.WriteLine("Progress saved successfully!");

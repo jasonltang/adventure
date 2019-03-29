@@ -24,10 +24,11 @@ namespace Adventure.Actions
             PlayerAttackEnemy();
             if (IsEnemyDead())
             {
+                var modifiedGold = Helpers.ModifyGold(_enemy.Gold);
                 Console.WriteLine($"You have killed the {_enemy.Name}!");
                 Console.WriteLine(_enemy.VictoryText);
-                Console.WriteLine($"You gain {_enemy.Gold} gold and {_enemy.Confidence} confidence.");
-                _player.Gold += _enemy.Gold;
+                Console.WriteLine($"You gain {modifiedGold} gold and {_enemy.Confidence} confidence.");
+                _player.Gold += modifiedGold;
                 _player.Confidence += _enemy.Confidence;
                 Console.WriteLine();
                 PostBattleActions();
@@ -106,23 +107,24 @@ namespace Adventure.Actions
             }
             else if (_player.Location.ToString().Contains("TrialBattle"))
             {
-                if (_player.Area != 10)
+                if (_player.Area != 5)
                 {
                     _player.Area++;
                     _player.MaxHitpoints = Helpers.GetHitpointsByArea[_player.Area];
+                    _player.Hitpoints = _player.MaxHitpoints;
                     Console.WriteLine($"Congratulations! You have advanced to area {_player.Area}!");
-                    Console.WriteLine($"Your max hitpoints increases to {_player.Hitpoints}.");
+                    Console.WriteLine($"Your max hitpoints becomes {_player.Hitpoints}.");
                     Console.WriteLine($"You wonder how your confidence rates on the high score list now.");
                     Console.WriteLine($"This area contains stronger enemies.");
-                    _player.Hitpoints = _player.MaxHitpoints;
                     new ChangeLocationAction(Home.GetInstance()).Execute();
+                    Console.ForegroundColor = Helpers.GetTextColourByArea(_player.Area);
                 }
                 else
                 {
                     _player.Reset();
-                    int confidenceBonus = 1000;
-                    _player.Confidence += confidenceBonus;
-                    Console.WriteLine($"You have beaten the final boss! You gain {confidenceBonus} confidence and you have been returned to area 1 to start the journey again.");
+                    Console.WriteLine($"You have beaten the final boss! You have been returned to area 1 to start the journey again, retaining only your confidence.");
+                    Console.WriteLine($"To help with your quest, you now also gain 10% extra gold from monsters.");
+                    Console.ForegroundColor = Helpers.GetTextColourByArea(_player.Area);
                 }
             }
         }

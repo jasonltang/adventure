@@ -41,24 +41,25 @@ namespace Adventure.Locations
                 {
                     if (rand % numOptions == 0)
                     {
-                        _player.Attack++;
+                        _player.Attack += _player.Area;
                         Console.WriteLine("You come across a large rock.\n" +
                             "You throw it as far as you can and feel stronger.\n" +
                             $"Attack increased to {_player.Attack}!\n");
                     }
                     else if (rand % numOptions == 1)
                     {
-                        _player.Defense++;
+                        _player.Defense += _player.Area;
                         Console.WriteLine("You come across a large rock.\n" +
                             "It starts rolling towards you and you jump out of the way quickly.\n" +
-                            "Defense increased by 1!\n");
+                            $"Defense increased to {_player.Defense}!\n");
                     }
                     else if (rand % numOptions == 2)
                     {
-                        _player.MaxHitpoints++;
+                        _player.MaxHitpoints += _player.Area * 5;
+                        _player.Hitpoints = _player.MaxHitpoints;
                         Console.WriteLine("You come across a large rock.\n" +
                             "You take a nap on it and feel refreshed.\n" +
-                            "Hitpoints increased by 1!\n");
+                            $"Hitpoints increased to {_player.Hitpoints}!\n");
                     }
 
                     new ChangeLocationAction(Park.GetInstance()).Execute();

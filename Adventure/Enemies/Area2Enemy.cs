@@ -16,7 +16,7 @@ namespace Adventure.Enemies
                     (
                         name: "Mushroom",
                         hitpoints: 6,
-                        attack: 2,
+                        attack: 4,
                         defense: 2,
                         weapon: "Spores",
                         victoryText: "Even though it looks tasty, you avoid eating the mushroom.",
@@ -27,7 +27,7 @@ namespace Adventure.Enemies
                     (
                         name: "Monkey",
                         hitpoints: 12,
-                        attack: 3,
+                        attack: 6,
                         defense: 2,
                         weapon: "Dexterity",
                         victoryText: "The monkey swings back into the branches.",
@@ -49,7 +49,7 @@ namespace Adventure.Enemies
                     (
                         name: "Hiker",
                         hitpoints: 20,
-                        attack: 4,
+                        attack: 7,
                         defense: 2,
                         weapon: "Friendly Greeting",
                         victoryText: "Your reflexes allow you to jump out of the way.",
@@ -60,7 +60,7 @@ namespace Adventure.Enemies
                     (
                         name: "Fox",
                         hitpoints: 10,
-                        attack: 5,
+                        attack: 8,
                         defense: 3,
                         weapon: "Slyness",
                         victoryText: "You are like the grapes, just out of reach for the fox.",
@@ -71,7 +71,7 @@ namespace Adventure.Enemies
                     (
                         name: "Eagle",
                         hitpoints: 8,
-                        attack: 5,
+                        attack: 8,
                         defense: 8,
                         weapon: "Talons",
                         victoryText: "Finally the eagle falls out of the sky.",
@@ -82,7 +82,7 @@ namespace Adventure.Enemies
                     (
                         name: "Moose",
                         hitpoints: 22,
-                        attack: 4,
+                        attack: 8,
                         defense: 3,
                         weapon: "Antlers",
                         victoryText: "The moose moos as it accepts the bad news.",
@@ -93,8 +93,8 @@ namespace Adventure.Enemies
                     (
                         name: "Snake",
                         hitpoints: 6,
-                        attack: 8,
-                        defense: 8,
+                        attack: 10,
+                        defense: 6,
                         weapon: "Constriction",
                         victoryText: "You shed its skin.",
                         gold: 11,
@@ -104,7 +104,7 @@ namespace Adventure.Enemies
                     (
                         name: "Panda",
                         hitpoints: 50,
-                        attack: 5,
+                        attack: 8,
                         defense: 0,
                         weapon: "Bamboo Shoots",
                         victoryText: "It goes back to eating its bamboo shoots.",
@@ -115,11 +115,11 @@ namespace Adventure.Enemies
                     (
                         name: "Bear",
                         hitpoints: 25,
-                        attack: 4,
-                        defense: 8,
+                        attack: 7,
+                        defense: 6,
                         weapon: "Claws",
                         victoryText: "There's a bear in there, and a chair as well.",
-                        gold: 12,
+                        gold: 17,
                         confidence: 30
                     ),
                     new Enemy

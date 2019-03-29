@@ -29,7 +29,14 @@ namespace Adventure.Locations
                 {
                     case 1:
                         return "You are at the park. The fresh air and cool breeze feels good.";
-                    case 2: return "You are in a forest. There are animals everywhere.";
+                    case 2:
+                        return "You are in a forest. There are animals everywhere.";
+                    case 3:
+                        return "You are in a university. You're so glad you decided to become an adventurer instead.";
+                    case 4:
+                        return "You are at the jail. There are criminals everywhere.";
+                    case 5:
+                        return "You are in the Land of Dreams. You are vaguely reminded of your own dreams.";
                     default:
                         return "Some other location text, e.g. shopping mall";
                 }
@@ -42,10 +49,10 @@ namespace Adventure.Locations
             {
                 return new List<IAction>()
                 {
-                    new ChangeLocationAction(Home.GetInstance()),
                     new ChangeLocationAction(new ParkBattle()),
                     new NapAction(),
-                    new ViewStatsAction()
+                    new ViewStatsAction(),
+                    new ChangeLocationAction(Home.GetInstance()),
                 };
             }
         }

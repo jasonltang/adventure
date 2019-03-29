@@ -23,9 +23,9 @@ namespace Adventure.Enemies
                         {
                             new Enemy
                             (
-                                name: "Salesman",
+                                name: "Salesman", // Choose another name
                                 hitpoints: 30,
-                                attack: 5,
+                                attack: 6,
                                 defense: 3,
                                 weapon: "High Pressure Sales Tactics",
                                 victoryText: "After defeating this salesman, you are no longer afraid of salespeople.",
@@ -40,10 +40,10 @@ namespace Adventure.Enemies
                             (
                                 name: "Jane Goodall",
                                 hitpoints: 65,
-                                attack: 40,
-                                defense: 20,
+                                attack: 28,
+                                defense: 8,
                                 weapon: "Compassion",
-                                victoryText: "You defeat Jane Goodall, but vow to study her works.",
+                                victoryText: "You defeat Jane Goodall, but vow to protect the chimpanzees.",
                                 gold: 70,
                                 confidence: 70
                             )
@@ -53,14 +53,47 @@ namespace Adventure.Enemies
                         {
                             new Enemy
                             (
-                                name: "Boss 3",
-                                hitpoints: 5,
-                                attack: 1,
-                                defense: 0,
-                                weapon: "Big Teeth",
-                                victoryText: "Killing the tiny rat really makes you feel tough.",
-                                gold: 2,
-                                confidence: 1
+                                name: "Mob of Student Activists",
+                                hitpoints: 300,
+                                attack: 30,
+                                attackStdev: 70,
+                                defense: 40,
+                                weapon: "Political Slogans",
+                                victoryText: "Without a mobilising leader, the students quickly get back to their studies.",
+                                gold: 150,
+                                confidence: 150
+                            )
+                        };
+                case 4:
+                    return new List<Enemy>
+                        {
+                            new Enemy
+                            (
+                                name: "Adolf Hitler",
+                                hitpoints: 100,
+                                attack: 100,
+                                attackStdev: 75,
+                                defense: 100,
+                                weapon: "Mein Kampf",
+                                victoryText: "Well done, you've just resolved the Grandfather paradox.",
+                                gold: 310,
+                                confidence: 310
+                            )
+                        };
+                case 5:
+                    return new List<Enemy>
+                        {
+                            new Enemy
+                            (
+                                name: "White Whale",
+                                hitpoints: 10000,
+                                attack: 400,
+                                attackStdev: 60,
+                                defense: -200,
+                                weapon: "Flailing Tail",
+                                victoryText: "You have killed the White Whale and lived...",
+                                gold: 0,
+                                confidence: 10000
                             )
                         };
                 default:

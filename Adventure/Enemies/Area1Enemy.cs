@@ -136,7 +136,7 @@ namespace Adventure.Enemies
                         attack: 10,
                         defense: 1,
                         weapon: "Sharp claws",
-                        victoryText: "You have no idea where this cat came from.",
+                        victoryText: "Curiosity killed the cat.",
                         gold: 8,
                         confidence: 5
                     ),

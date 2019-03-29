@@ -41,21 +41,6 @@ namespace Adventure.Enemies
                 case 5:
                     _generator = new Area5Enemy();
                     break;
-                case 6:
-                    _generator = new Area6Enemy();
-                    break;
-                case 7:
-                    _generator = new Area7Enemy();
-                    break;
-                case 8:
-                    _generator = new Area8Enemy();
-                    break;
-                case 9:
-                    _generator = new Area9Enemy();
-                    break;
-                case 10:
-                    _generator = new Area10Enemy();
-                    break;
                 default:
                     break;
             }

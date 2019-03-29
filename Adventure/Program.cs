@@ -1,10 +1,15 @@
 ﻿// Todo list
-// add more monsters and bosses
-// For each level: Set the savefile, set theme, set hitpoints, add monsters, add boss, set boss info, add weapons, adjust monsters as necessary
 
-// fix trial info
-// Remove experience and levelling as it's too confusing
-//add more weapon and armour shop
+// Upon finishing game, reset to area 1 and give 1.2x gold multiplier. Save 'game completions' in stats. Give a flat confidence bonus.
+
+// Rebalance monsters
+
+// Reassign keys ("Return home") at the end
+
+// Potentially set enemy names and weapons as "a cat" and "its sharp claws"
+
+// Set a different console colour for each level
+
 //make savefile non-plain
 
 using System;
@@ -16,6 +21,7 @@ namespace Adventure
         static void Main(string[] args)
         {
             var player = Player.GetInstance();
+            Console.ForegroundColor = Helpers.GetTextColourByArea(player.Area);
             Console.WriteLine(player.Location.LocationText);
             while (true)
             {
