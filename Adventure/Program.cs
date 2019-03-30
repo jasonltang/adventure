@@ -17,9 +17,10 @@ namespace Adventure
             var player = Player.GetInstance();
             Console.ForegroundColor = Helpers.GetTextColourByArea(player.Area);
             Console.WriteLine(player.Location.LocationText);
+            bool lastCommandValid = true;
             while (true)
             {
-                InputReader.GetAction(player);
+                InputReader.GetAction(player, ref lastCommandValid);
             }
         }
     }

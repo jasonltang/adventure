@@ -18,13 +18,17 @@ namespace Adventure.Actions
             if (File.Exists("AdventureSaveFile.txt"))
             {
                 Console.WriteLine("There is already a save file. Do you want to overwrite? (Y/N)");
-                if (char.ToUpper(Console.ReadKey().KeyChar) != 'Y')
+                char input;
+                if ((input = char.ToUpper(Console.ReadKey(true).KeyChar)) != 'Y')
                 {
+                    if (input == 'N')
+                        Console.WriteLine('N');
                     Console.WriteLine();
                     Console.WriteLine("Cancelled save.");
                     return;
                 }
             }
+            Console.WriteLine('Y');
             var player = Player.GetInstance();
             if (PLAINSAVE)
             {

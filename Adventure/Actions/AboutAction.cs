@@ -11,7 +11,7 @@ namespace Adventure.Actions
 
         public void Execute()
         {
-            Console.WriteLine("Adventure v1");
+            Console.WriteLine($"Adventure v1.1");
             Console.WriteLine("(C) Jason Tang, 2019");
             Console.WriteLine();
             Console.WriteLine("This game is a text-based RPG based off the old BBS game Legend of");
