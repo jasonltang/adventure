@@ -18,8 +18,9 @@ namespace Adventure.Actions
             if (File.Exists("AdventureSaveFile.txt"))
             {
                 Console.WriteLine("There is already a save file. Do you want to overwrite? (Y/N)");
-                if (Console.ReadLine().ToUpper() != "Y")
+                if (char.ToUpper(Console.ReadKey().KeyChar) != 'Y')
                 {
+                    Console.WriteLine();
                     Console.WriteLine("Cancelled save.");
                     return;
                 }
@@ -63,6 +64,7 @@ namespace Adventure.Actions
                     sw.WriteLine(Convert.ToBase64String(Encoding.UTF8.GetBytes(nameof(player.GameCompletions) + "," + player.GameCompletions)));
                 }
             }
+            Console.WriteLine();
             Console.WriteLine("Progress saved successfully!");
         }
     }
