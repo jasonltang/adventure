@@ -41,6 +41,9 @@ namespace Adventure.Actions
                 .Take(10)
                 .ToList();
             int i = 1;
+            Console.WriteLine();
+            Console.WriteLine("       -High Scores-");
+            Console.WriteLine();
             foreach (var x in sortedHighScores)
             {
                 var paddedNumber = $"{i}".PadRight(4);

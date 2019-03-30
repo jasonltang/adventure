@@ -5,9 +5,9 @@ using Adventure.Enemies;
 
 namespace Adventure.Locations
 {
-    class ParkBattle : Location
+    class ArenaBattle : Location
     {
-        public ParkBattle()
+        public ArenaBattle()
         {
             _player = Player.GetInstance();
             IEnemyFactory enemyFactory = new EnemyFactory();
@@ -18,7 +18,7 @@ namespace Adventure.Locations
 
         public override string GetText()
         {
-            return "Search for something to fight";
+            return "Find something to fight";
         }
 
         public override string LocationText
@@ -44,14 +44,14 @@ namespace Adventure.Locations
                         _player.Attack += _player.Area;
                         Console.WriteLine("You come across a large rock.\n" +
                             "You throw it as far as you can and feel stronger.\n" +
-                            $"Attack increased to {_player.Attack}!\n");
+                            $"******Attack increased to {_player.Attack}!******\n");
                     }
                     else if (rand % numOptions == 1)
                     {
                         _player.Defense += _player.Area;
                         Console.WriteLine("You come across a large rock.\n" +
                             "It starts rolling towards you and you jump out of the way quickly.\n" +
-                            $"Defense increased to {_player.Defense}!\n");
+                            $"******Defense increased to {_player.Defense}!******\n");
                     }
                     else if (rand % numOptions == 2)
                     {
@@ -59,10 +59,10 @@ namespace Adventure.Locations
                         _player.Hitpoints = _player.MaxHitpoints;
                         Console.WriteLine("You come across a large rock.\n" +
                             "You take a nap on it and feel refreshed.\n" +
-                            $"Hitpoints increased to {_player.Hitpoints}!\n");
+                            $"******Hitpoints increased to {_player.Hitpoints}!******\n");
                     }
 
-                    new ChangeLocationAction(Park.GetInstance()).Execute();
+                    new ChangeLocationAction(Arena.GetInstance()).Execute();
                     return "";
                 }
             }
@@ -75,7 +75,7 @@ namespace Adventure.Locations
                 return new List<IAction>()
                 {
                     new AttackAction(_enemy),
-                    new RunAction("Park"),
+                    new RunAction("Arena"),
                     new ViewStatsAction()
                 };
             }

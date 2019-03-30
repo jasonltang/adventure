@@ -42,7 +42,7 @@ namespace Adventure.Enemies
                         defense: 48,
                         weapon: "Illegal Wealth",
                         victoryText: "After knocking him out, you take some extra money from his wallet.",
-                        gold: 225,
+                        gold: 335,
                         confidence: 39
                     ),
                     new Enemy
@@ -53,7 +53,7 @@ namespace Adventure.Enemies
                         defense: 32,
                         weapon: "Offshore Accounts",
                         victoryText: "You expose his fake business for what it really is.",
-                        gold: 173,
+                        gold: 273,
                         confidence: 56
                     ),
                     new Enemy
@@ -83,10 +83,10 @@ namespace Adventure.Enemies
                         name: "Hacker",
                         hitpoints: 93,
                         attack: 63,
-                        defense: 75,
+                        defense: 55,
                         weapon: "Social Engineering Skills",
-                        victoryText: "You delete his phishing email and report him to your local administrator.",
-                        gold: 140,
+                        victoryText: "You delete his email and report him to your local administrator.",
+                        gold: 240,
                         confidence: 34
                     ),
                     new Enemy
@@ -97,7 +97,7 @@ namespace Adventure.Enemies
                         defense: 82,
                         weapon: "Knuckle Duster",
                         victoryText: "You shudder to think what would have happened if you'd been defeated.",
-                        gold: 186,
+                        gold: 286,
                         confidence: 79
                     ),
                     new Enemy
@@ -105,8 +105,8 @@ namespace Adventure.Enemies
                         name: "Pickpocket",
                         hitpoints: 112,
                         attack: 63,
-                        attackStdev: 40,
-                        defense: 80,
+                        attackStdev: 20,
+                        defense: 40,
                         weapon: "Stealth",
                         victoryText: "Luckily he only got your fake wallet.",
                         gold: 127,
@@ -120,7 +120,7 @@ namespace Adventure.Enemies
                         defense: 75,
                         weapon: "Big Suitcase",
                         victoryText: "You have inflicted a death sentence on this man.",
-                        gold: 189,
+                        gold: 289,
                         confidence: 68
                     ),
                     new Enemy
@@ -142,7 +142,7 @@ namespace Adventure.Enemies
                         defense: 90,
                         weapon: "IED",
                         victoryText: "You have just saved hundreds of lives.",
-                        gold: 312,
+                        gold: 412,
                         confidence: 95
                     ),
                 };

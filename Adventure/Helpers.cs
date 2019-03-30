@@ -41,16 +41,16 @@ namespace Adventure
         {
             { 0, new Weapon("Fists", 0, 0) },
             { 1, new Weapon("Chopstick", 1, 10) },
-            { 2, new Weapon("Tennis Racquet", 2, 40)},
+            { 2, new Weapon("Empty Beer Bottle", 2, 40)},
             { 3, new Weapon("Baseball Bat", 4, 130)},
             { 4, new Weapon("Dagger", 7, 250)},
             { 5, new Weapon("Sword", 15, 400)},
             { 6, new Weapon("Pen", 32, 1000)},
             { 7, new Weapon("Chainsaw", 52, 3000)},
             { 8, new Weapon("Shotgun", 80, 10000)},
-            { 9, new Weapon("Laser", 110, 20000)},
-            { 10, new Weapon("Flamethrower", 170, 35000)},
-            { 11, new Weapon("Thor's Hammer", 280, 60000)},
+            { 9, new Weapon("Laser", 130, 20000)},
+            { 10, new Weapon("Flamethrower", 200, 35000)},
+            { 11, new Weapon("Thor's Hammer", 300, 60000)},
             { 12, new Weapon("Elder Wand", 400, 100000)},
 
         };
@@ -80,9 +80,9 @@ namespace Adventure
             { 6, new Armour("Gladiator Armour", 32, 1000)},
             { 7, new Armour("Iron Man Suit", 52, 3000)},
             { 8, new Armour("Shield of Sand", 80, 10000)},
-            { 9, new Armour("Forcefield", 110, 20000)},
-            { 10, new Armour("Protection Bubble", 170, 35000)},
-            { 11, new Armour("Nautilus", 280, 60000)},
+            { 9, new Armour("Forcefield", 130, 20000)},
+            { 10, new Armour("Protection Bubble", 200, 35000)},
+            { 11, new Armour("Nautilus", 300, 60000)},
             { 12, new Armour("Seldon Plan", 400, 100000)},
 
         };
@@ -108,15 +108,15 @@ namespace Adventure
             switch (area)
             {
                 case 1:
-                    return ConsoleColor.White;
-                case 2:
                     return ConsoleColor.DarkGreen;
-                case 3:
-                    return ConsoleColor.DarkYellow;
-                case 4:
-                    return ConsoleColor.DarkRed;
-                case 5:
+                case 2:
                     return ConsoleColor.DarkCyan;
+                case 3:
+                    return ConsoleColor.Gray;
+                case 4:
+                    return ConsoleColor.DarkYellow;
+                case 5:
+                    return ConsoleColor.DarkRed;
                 default:
                     return ConsoleColor.Black;
             }

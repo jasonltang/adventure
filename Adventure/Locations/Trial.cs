@@ -29,10 +29,10 @@ namespace Adventure.Locations
             {
                 return new List<IAction>()
                 {
-                    new ChangeLocationAction(Home.GetInstance()),
                     new ChangeLocationAction(new TrialBattle()),
                     new GetTrialInfoAction(),
-                    new ViewStatsAction()
+                    new ViewStatsAction(),
+                    new ChangeLocationAction(Home.GetInstance()),
                 };
             }
         }

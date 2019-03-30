@@ -41,7 +41,7 @@ namespace Adventure.Enemies
                         attack: 20,
                         defense: 10,
                         weapon: "Daunting Word Count",
-                        victoryText: "After pulling an all-nighter on the last day, you finally submit the essay.",
+                        victoryText: "After pulling two all-nighters, you finally submit the essay.",
                         gold: 37,
                         confidence: 34
                     ),
@@ -63,7 +63,7 @@ namespace Adventure.Enemies
                         attack: 27,
                         defense: 11,
                         weapon: "Broken English",
-                        victoryText: "After you knock him to the ground, you realise he just wanted to know the location of the nearest bathroom.",
+                        victoryText: "He just wanted to know where the bathroom was...",
                         gold: 43,
                         confidence: 29
                     ),
@@ -119,7 +119,7 @@ namespace Adventure.Enemies
                         attackStdev: 50,
                         defense: 20,
                         weapon: "Normalised Grading",
-                        victoryText: "You pass the exam, but you will have various recurring nightmares about the exam.",
+                        victoryText: "You pass the exam, but you will have recurring nightmares about the exam.",
                         gold: 120,
                         confidence: 35
                     ),

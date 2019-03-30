@@ -27,16 +27,16 @@ namespace Adventure.Locations
             {
                 return new List<IAction>()
                 {
-                    new ChangeLocationAction(Park.GetInstance()),
-                    new ChangeLocationAction(Shop.GetInstance()),
+                    new ChangeLocationAction(Arena.GetInstance()),
+                    new NapAction(),
                     new ViewStatsAction(),
+                    new ChangeLocationAction(Shop.GetInstance()),
+                    new ChangeLocationAction(Trial.GetInstance()),
                     new ViewHighScoresAction(),
                     new UploadHighScoreAction(),
-                    new NapAction(),
-                    new ChangeLocationAction(Trial.GetInstance()),
+                    new ChangeNameAction(),
                     new SaveAction(),
                     new LoadAction(),
-                    new ChangeNameAction(),
                     new AboutAction(),
                 };
             }

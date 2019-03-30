@@ -6,7 +6,7 @@ namespace Adventure.Actions
 {
     class SaveAction : IAction
     {
-        public const bool PLAINSAVE = true;
+        public const bool PLAINSAVE = false;
 
         public string GetText()
         {

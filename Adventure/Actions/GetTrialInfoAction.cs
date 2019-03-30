@@ -15,8 +15,8 @@ namespace Adventure.Actions
             switch (player.Area)
             {
                 case 1:
-                    Console.WriteLine($"Salespeople are very resilient,\n" +
-                        $"so it will take a lot of endurance to bring one down.");
+                    Console.WriteLine($"Elephants have high health,\n" +
+                        $"so make sure you can hit it hard.");
                     break;
                 case 2:
                     Console.WriteLine($"Jane Goodall is one of the leading experts on chimpanzees.\n" +
@@ -31,8 +31,9 @@ namespace Adventure.Actions
                         $"Concentrate on hitting him hard.");
                     break;
                 case 5:
-                    Console.WriteLine($"Your final challenge is to kill the White Whale." +
-                        $"You will need the best weapon and armour you can get. Good luck!");
+                    Console.WriteLine($"Your final challenge is to kill the White Whale.\n" +
+                        $"You will need the best weapon and armour you can get.\n" +
+                        $"Good luck!");
                     break;
                 default:
                     Console.WriteLine($"If you see this, it is a bug. Please report it to the developer. Code: 1");

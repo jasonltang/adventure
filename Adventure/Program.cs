@@ -1,18 +1,5 @@
-﻿// Todo list
-
-// Upon finishing game, reset to area 1 and give 1.2x gold multiplier. Save 'game completions' in stats. Give a flat confidence bonus.
-
-// Rebalance monsters
-
-// Reassign keys ("Return home") at the end
-
-// Potentially set enemy names and weapons as "a cat" and "its sharp claws"
-
-// Set a different console colour for each level
-
-//make savefile non-plain
-
-using System;
+﻿using System;
+using System.IO;
 
 namespace Adventure
 {
@@ -20,6 +7,13 @@ namespace Adventure
     {
         static void Main(string[] args)
         {
+            if (!File.Exists("RestSharp.dll") || !File.Exists("Newtonsoft.Json.dll"))
+            {
+                Console.WriteLine("RestSharp.dll and Newtonsoft.Json.dll are needed to play the game.");
+                Console.WriteLine("Please extract them from the zip into the same folder as the exe.");
+                Console.ReadKey();
+                return;
+            }
             var player = Player.GetInstance();
             Console.ForegroundColor = Helpers.GetTextColourByArea(player.Area);
             Console.WriteLine(player.Location.LocationText);

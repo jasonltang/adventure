@@ -20,8 +20,8 @@ namespace Adventure.Actions
         {
             switch (_runTo)
             {
-                case "Park":
-                    new ChangeLocationAction(Park.GetInstance()).Execute();
+                case "Arena":
+                    new ChangeLocationAction(Arena.GetInstance()).Execute();
                     break;
                 case "Trial":
                     new ChangeLocationAction(Trial.GetInstance()).Execute();

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using Adventure.Enemies;
 using Adventure.Locations;
 
@@ -37,11 +38,13 @@ namespace Adventure.Actions
             EnemyAttackPlayer();
             if (IsPlayerDead())
             {
-                Console.WriteLine("You die and lose 10% of your confidence!");
+                Console.WriteLine("You die and lose 5% of your confidence!");
+                Console.WriteLine("****************************************");
                 Console.WriteLine();
                 _player.Deaths++;
                 _player.Hitpoints = _player.MaxHitpoints;
-                _player.Confidence = (int)(0.9 * _player.Confidence);
+                _player.Confidence = (int)(0.95 * _player.Confidence);
+                Thread.Sleep(1000); // Don't allow input here
                 new ChangeLocationAction(Home.GetInstance()).Execute();
                 return;
             }
@@ -101,9 +104,9 @@ namespace Adventure.Actions
 
         private void PostBattleActions()
         {
-            if (_player.Location.ToString().Contains("ParkBattle"))
+            if (_player.Location.ToString().Contains("ArenaBattle"))
             {
-                new ChangeLocationAction(Park.GetInstance()).Execute();
+                new ChangeLocationAction(Arena.GetInstance()).Execute();
             }
             else if (_player.Location.ToString().Contains("TrialBattle"))
             {

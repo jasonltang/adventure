@@ -51,6 +51,8 @@
   <ItemGroup>
     <Compile Include="Actions\AboutAction.cs" />
     <Compile Include="Actions\AttackAction.cs" />
+    <Compile Include="Actions\BuyArmourAction.cs" />
+    <Compile Include="Actions\BuyWeaponAction.cs" />
     <Compile Include="Actions\ChangeLocationAction.cs" />
     <Compile Include="Actions\ChangeNameAction.cs" />
     <Compile Include="Actions\GetTrialInfoAction.cs" />
@@ -70,11 +72,11 @@
     <Compile Include="Enemies\EnemyFactory.cs" />
     <Compile Include="Enemies\TrialEnemy.cs" />
     <Compile Include="Helpers.cs" />
-    <Compile Include="Locations\ParkBattle.cs" />
+    <Compile Include="Locations\ArenaBattle.cs" />
     <Compile Include="Locations\Home.cs" />
     <Compile Include="InputReader.cs" />
     <Compile Include="Locations\Location.cs" />
-    <Compile Include="Locations\Park.cs" />
+    <Compile Include="Locations\Arena.cs" />
     <Compile Include="Actions\IAction.cs" />
     <Compile Include="Locations\Shop.cs" />
     <Compile Include="Locations\Trial.cs" />

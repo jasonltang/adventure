@@ -41,8 +41,6 @@ namespace Adventure.Locations
                     sb.AppendLine($"{a.Key}.".PadRight(4) + $"{a.Value.Name}".PadRight(19) + $"{a.Value.Price}");
                 }
                 sb.AppendLine();
-                sb.AppendLine("\"w 2\" to buy weapon number 2, \"a 5\" to buy armour 5, etc.");
-                sb.AppendLine();
                 sb.AppendLine($"Current weapon: {Helpers.GetWeapon[Player.GetInstance().Weapon].Name}");
                 sb.AppendLine($"Current armour: {Helpers.GetArmour[Player.GetInstance().Armour].Name}");
                 sb.AppendLine($"Your gold: {Player.GetInstance().Gold}");
@@ -52,7 +50,7 @@ namespace Adventure.Locations
 
         public override string GetText()
         {
-            return "Buy weapons and armour";
+            return "Zelda's weapons and armour";
         }
 
         public override List<IAction> AllowedActions
@@ -61,6 +59,8 @@ namespace Adventure.Locations
             {
                 return new List<IAction>()
                 {
+                    new BuyWeaponAction(),
+                    new BuyArmourAction(),
                     new ChangeLocationAction(Home.GetInstance()),
                 };
             }

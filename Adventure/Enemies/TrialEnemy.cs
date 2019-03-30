@@ -23,12 +23,12 @@ namespace Adventure.Enemies
                         {
                             new Enemy
                             (
-                                name: "Salesman", // Choose another name
-                                hitpoints: 30,
+                                name: "Elephant",
+                                hitpoints: 40,
                                 attack: 6,
-                                defense: 3,
-                                weapon: "High Pressure Sales Tactics",
-                                victoryText: "After defeating this salesman, you are no longer afraid of salespeople.",
+                                defense: 1,
+                                weapon: "Swinging Trunk",
+                                victoryText: "You regret not having the chance to ride on the elephant.",
                                 gold: 30,
                                 confidence: 30
                             )

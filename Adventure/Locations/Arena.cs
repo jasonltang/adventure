@@ -3,16 +3,15 @@ using Adventure.Actions;
 
 namespace Adventure.Locations
 {
-    // Shouldn't really be called the Park anymore since that's the level 1 theme only.
-    class Park : Location
+    class Arena : Location
     {
-        private static Park _instance;
-        public static Park GetInstance()
+        private static Arena _instance;
+        public static Arena GetInstance()
         {
-            if (_instance == null) _instance = new Park();
+            if (_instance == null) _instance = new Arena();
             return _instance;
         }
-        private Park()
+        private Arena()
         {
 
         }
@@ -32,7 +31,7 @@ namespace Adventure.Locations
                     case 2:
                         return "You are in a forest. There are animals everywhere.";
                     case 3:
-                        return "You are in a university. You're so glad you decided to become an adventurer instead.";
+                        return "You are in a university. Let's fight some students.";
                     case 4:
                         return "You are at the jail. There are criminals everywhere.";
                     case 5:
@@ -49,7 +48,7 @@ namespace Adventure.Locations
             {
                 return new List<IAction>()
                 {
-                    new ChangeLocationAction(new ParkBattle()),
+                    new ChangeLocationAction(new ArenaBattle()),
                     new NapAction(),
                     new ViewStatsAction(),
                     new ChangeLocationAction(Home.GetInstance()),

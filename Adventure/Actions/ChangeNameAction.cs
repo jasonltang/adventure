@@ -12,7 +12,7 @@ namespace Adventure.Actions
         public void Execute()
         {
             var player = Player.GetInstance();
-            Console.WriteLine($"What would you like to change your name to?");
+            Console.WriteLine($"What would you like to change your name to? (Input name and press enter)");
             var input = Console.ReadLine();
             if (input.Length == 0)
             {
