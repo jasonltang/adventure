@@ -52,7 +52,7 @@ namespace Adventure.Enemies
                         attack: 7,
                         defense: 2,
                         weapon: "Friendly Greeting",
-                        victoryText: "Your reflexes allow you to jump out of the way.",
+                        victoryText: "Why are hikers all so friendly?",
                         gold: 15,
                         confidence: 8
                     ),

@@ -27,7 +27,7 @@ namespace Adventure.Locations
             {
                 int numOptions = 100;
                 int rand = _player.Rng.Next();
-                if (rand % numOptions > 2)
+                if (rand % numOptions > 3)
                 {
                     var vowels = new HashSet<char>() { 'A', 'E', 'I', 'O', 'U' };
                     string article = vowels.Contains(_enemy.Name[0]) ? "an" : "a";
@@ -60,6 +60,15 @@ namespace Adventure.Locations
                         Console.WriteLine("You come across a large rock.\n" +
                             "You take a nap on it and feel refreshed.\n" +
                             $"******Hitpoints increased to {_player.Hitpoints}!******\n");
+                    }
+                    else if (rand % numOptions == 3)
+                    {
+                        var goldBonus = (int)(Math.Sqrt(_player.Confidence) * _player.Area * _player.Area);
+                        _player.Gold += goldBonus;
+                        Console.WriteLine("You meet an old man who wants to buy your pen.\n" +
+                            "You immediately begin to negotiate on the value of the pen.\n" +
+                            "Your Confidence allows you to sell it for a high price.\n" +
+                            $"******Earned {goldBonus} gold!******\n");
                     }
 
                     new ChangeLocationAction(Arena.GetInstance()).Execute();

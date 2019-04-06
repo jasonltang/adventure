@@ -54,7 +54,7 @@ namespace Adventure.Enemies
                             new Enemy
                             (
                                 name: "Mob of Student Activists",
-                                hitpoints: 300,
+                                hitpoints: 200,
                                 attack: 30,
                                 attackStdev: 70,
                                 defense: 40,

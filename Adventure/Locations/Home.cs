@@ -35,6 +35,7 @@ namespace Adventure.Locations
                     new ViewHighScoresAction(),
                     new UploadHighScoreAction(),
                     new ChangeNameAction(),
+                    new BeginnersGuideAction(),
                     new SaveAction(),
                     new LoadAction(),
                     new AboutAction(),

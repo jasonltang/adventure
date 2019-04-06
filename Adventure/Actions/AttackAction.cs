@@ -113,10 +113,8 @@ namespace Adventure.Actions
                 if (_player.Area != 5)
                 {
                     _player.Area++;
-                    _player.MaxHitpoints = Helpers.GetHitpointsByArea[_player.Area];
                     _player.Hitpoints = _player.MaxHitpoints;
                     Console.WriteLine($"Congratulations! You have advanced to area {_player.Area}!");
-                    Console.WriteLine($"Your max hitpoints becomes {_player.Hitpoints}.");
                     Console.WriteLine($"You wonder how your confidence rates on the high score list now.");
                     Console.WriteLine($"This area contains stronger enemies.");
                     new ChangeLocationAction(Home.GetInstance()).Execute();
@@ -125,6 +123,7 @@ namespace Adventure.Actions
                 else
                 {
                     _player.Reset();
+                    _player.GameCompletions++;
                     Console.WriteLine($"You have beaten the final boss! You have been returned to area 1 to start the journey again, retaining only your confidence.");
                     Console.WriteLine($"To help with your quest, you now also gain 10% extra gold from monsters.");
                     Console.ForegroundColor = Helpers.GetTextColourByArea(_player.Area);

@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Actions\AboutAction.cs" />
     <Compile Include="Actions\AttackAction.cs" />
+    <Compile Include="Actions\BeginnersGuideAction.cs" />
     <Compile Include="Actions\BuyArmourAction.cs" />
     <Compile Include="Actions\BuyWeaponAction.cs" />
     <Compile Include="Actions\ChangeLocationAction.cs" />

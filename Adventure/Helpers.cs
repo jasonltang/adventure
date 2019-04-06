@@ -87,15 +87,6 @@ namespace Adventure
 
         };
 
-        public static Dictionary<int, int> GetHitpointsByArea = new Dictionary<int, int>
-        {
-            { 1, 10 },
-            { 2, 30 },
-            { 3, 70 },
-            { 4, 150 },
-            { 5, 310 }
-        };
-
         public static int ModifyGold(int baseGold)
         {
             var gameCompletions = Player.GetInstance().GameCompletions;
